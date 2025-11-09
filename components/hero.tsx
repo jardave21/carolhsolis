@@ -49,7 +49,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[90vh] flex items-center pt-20 pb-12 px-4 md:px-6 bg-gradient-to-b from-background via-background to-background/80"
+      className="min-h-[90vh] flex items-center pt-2 pb-12 px-4 md:px-6 bg-gradient-to-b from-background via-background to-background/80"
     >
       <div className="max-w-5xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
