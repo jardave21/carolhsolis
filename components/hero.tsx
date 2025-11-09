@@ -1,10 +1,50 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [message, setMessage] = useState("")
+
   useEffect(() => setIsVisible(true), [])
+
+  const isValidEmail = useMemo(() => {
+    // Validación sencilla; suficiente para front-end
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
+  }, [email])
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!isValidEmail) {
+      setStatus("error")
+      setMessage("Ingresa un correo válido.")
+      return
+    }
+    try {
+      setStatus("loading")
+      setMessage("")
+      // 👉 Aquí puedes llamar a tu backend si lo deseas
+      // const res = await fetch("/api/subscribe", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ email }),
+      // })
+      // if (!res.ok) throw new Error("Error al enviar")
+      // Simulación de éxito:
+      await new Promise((r) => setTimeout(r, 800))
+
+      setStatus("success")
+      setMessage("¡Gracias! Te contactaremos pronto.")
+      setEmail("")
+    } catch (err) {
+      setStatus("error")
+      setMessage("No se pudo enviar. Intenta de nuevo.")
+    } finally {
+      setTimeout(() => setStatus("idle"), 2500)
+    }
+  }
 
   return (
     <section
@@ -22,9 +62,68 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold font-poppins text-foreground leading-tight">
               CAROL H. SOLIS
             </h1>
-            <p className="mt-6 text-lg text-muted font-inter leading-relaxed md:whitespace-nowrap">
+            <p className="mt-2 text-lg text-muted font-inter leading-relaxed md:whitespace-nowrap">
               PERIODISTA / ANALISTA POLÍTICA / ACTIVISTA / ESCRITORA
             </p>
+
+            {/* Formulario correo */}
+            <form onSubmit={onSubmit} className="mt-6">
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                Déjame tu correo y te escribo:
+              </label>
+              <div className="flex w-full max-w-md gap-2">
+                <input
+                  id="email"
+                  type="email"
+                  inputMode="email"
+                  autoComplete="email"
+                  placeholder="tu@correo.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none
+                             focus:ring-2 focus:ring-primary/40 focus:border-primary/60"
+                  aria-invalid={email.length > 0 ? (!isValidEmail).toString() : undefined}
+                  aria-describedby="email-help"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading" || !isValidEmail}
+                  className="rounded-xl px-4 py-3 text-sm font-semibold bg-primary text-primary-foreground
+                             disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {status === "loading" ? (
+                    <span className="inline-flex items-center gap-2">
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path
+                          className="opacity-75"
+                          d="M4 12a8 8 0 018-8"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                      Enviando…
+                    </span>
+                  ) : (
+                    "Enviar"
+                  )}
+                </button>
+              </div>
+              <p id="email-help" className="mt-2 text-xs text-muted">
+                Solo usaré tu correo para contactarte.
+              </p>
+              {status !== "idle" && message && (
+                <p
+                  className={`mt-3 text-sm ${
+                    status === "success" ? "text-green-600" : status === "error" ? "text-red-600" : "text-muted"
+                  }`}
+                >
+                  {message}
+                </p>
+              )}
+            </form>
           </div>
 
           {/* Derecha: foto + texto exterior */}
