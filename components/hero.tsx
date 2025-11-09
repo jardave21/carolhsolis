@@ -4,10 +4,7 @@ import { useEffect, useState } from "react"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  useEffect(() => setIsVisible(true), [])
 
   return (
     <section
@@ -16,37 +13,56 @@ export default function Hero() {
     >
       <div className="max-w-5xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          {/* Izquierda */}
           <div
-            className={`space-y-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            className={`space-y-6 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
-            <div>
-              <h1 className="text-5xl md:text-6xl font-bold font-poppins text-foreground leading-tight flex items-center">
-                CAROL H. SOLIS
-              </h1>
-              <p className="mt-6 text-lg text-muted font-inter leading-relaxed md:whitespace-nowrap">
-                PERIODISTA / ANALISTA POLÍTICA / ACTIVISTA / ESCRITORA
-              </p>
-            </div>
+            <h1 className="text-5xl md:text-6xl font-bold font-poppins text-foreground leading-tight">
+              CAROL H. SOLIS
+            </h1>
+            <p className="mt-6 text-lg text-muted font-inter leading-relaxed md:whitespace-nowrap">
+              PERIODISTA / ANALISTA POLÍTICA / ACTIVISTA / ESCRITORA
+            </p>
           </div>
 
-          {/* Right - Portrait with Glassmorphism */}
+          {/* Derecha: foto + texto exterior */}
           <div
-            className={`flex justify-center transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            className={`flex justify-center transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
             <div className="relative w-64 h-80 md:w-80 md:h-96">
-              {/* Glassmorphism Frame */}
-              <div className="absolute inset-0 bg-white/30 backdrop-blur-lg rounded-3xl border border-white/50 overflow-hidden shadow-xl hover-elevate">
+              {/* Imagen con borde */}
+              <div className="absolute inset-0 bg-white/30 backdrop-blur-lg rounded-3xl border border-white/50 overflow-hidden shadow-xl">
                 <img
                   src="/images/marca_personal2.jpg"
                   alt="Carol H. Solís"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top rounded-3xl"
                 />
               </div>
 
-              {/* Accent Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/20 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+              {/* Texto superior */}
+              <p className="absolute -top-8 left-1/2 -translate-x-1/2 text-black font-bold tracking-[0.3em] uppercase text-sm">
+                HOLA
+              </p>
+
+              {/* Texto derecho vertical */}
+              <p
+                className="absolute right-[-2.5rem] top-1/2 -translate-y-1/2 text-black font-bold tracking-[0.3em] uppercase text-sm"
+                style={{
+                  writingMode: "vertical-rl",
+                  textOrientation: "upright",
+                  letterSpacing: "0.2em",
+                }}
+              >
+                PRINCESAS
+              </p>
+
+              {/* Elementos decorativos opcionales */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
