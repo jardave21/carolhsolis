@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Poppins, Inter } from "next/font/google"
 import "./globals.css"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -17,40 +19,27 @@ const _inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Conferencista | Talleres de Escritura para Mujeres",
+  title: "Carolina 'Carol H.' Solís | Periodista y Creadora de Contenido",
   description:
-    "Conferencias y micro-talleres de escritura que transforman. Descubre cómo contar tus historias con poder y cuidado.",
+    "Carolina 'Carol H.' Solís es una destacada periodista y generadora de contenidos mexicana con más de 20 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.",
   generator: "v0.app",
   openGraph: {
-    title: "Conferencista | Talleres de Escritura",
+    title: "Carolina 'Carol H.' Solís | Periodista y Creadora de Contenido",
     description:
-      "Transformar con la palabra. Conferencias y talleres para mujeres que desean escribir, liderar y ser escuchadas.",
+      "Con más de 20 años de experiencia, Carolina 'Carol H.' Solís es una voz influyente en el periodismo mexicano, enfocada en política, derechos humanos y feminismo.",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Conferencista",
+        alt: "Carolina 'Carol H.' Solís",
       },
     ],
   },
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
 }
 
@@ -61,7 +50,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased`}>{children}</body>
+      <body className={`font-sans antialiased flex flex-col min-h-screen`}>
+        <Header />
+        <main className="flex-1 pt-[96px]">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }
