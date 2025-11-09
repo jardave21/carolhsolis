@@ -13,10 +13,10 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Link href="/" className="text-2xl font-bold text-secondary block mb-2">
-              LV
+              CS
             </Link>
             <p className="text-white/70">
-              Conferencista y tallerista comprometida con empoderar a las mujeres a través de la palabra.
+              Periodista y generadora de contenidos con más de 20 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#workshops" className="hover:text-white transition-colors">
-                  Talleres
+                  Publicaciones
                 </a>
               </li>
             </ul>
@@ -51,13 +51,13 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-white mb-4">Redes</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/carolhsolis/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-white/70 hover:text-white transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="mailto:contact@tudominio.com" className="text-white/70 hover:text-white transition-colors">
+              <a href="mailto:carolhsolis@gmail.com" className="text-white/70 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-white/60 text-sm">
-          <p>© {currentYear} Lucía Vargas. Todos los derechos reservados.</p>
+          <p>© {currentYear} Carolina "Carol H." Solís. Todos los derechos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">
               Política de privacidad

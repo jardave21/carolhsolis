@@ -1,24 +1,16 @@
-"use client"
 
-import { useState, useEffect } from "react"
-import Header from "@/components/header"
 import Hero from "@/components/hero"
-import EmailCapture from "@/components/email-capture"
+import About from "@/components/about"
+import SecondaryContent from "@/components/secondary-content"
+import ContactForm from "@/components/contact-form"
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
+    <>
       <Hero />
-      <EmailCapture />
-    </main>
+      <About />
+      <SecondaryContent />
+      <ContactForm />
+    </>
   )
 }
