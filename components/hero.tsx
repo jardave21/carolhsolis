@@ -25,15 +25,12 @@ export default function Hero() {
     try {
       setStatus("loading")
       setMessage("")
-      // 👉 Aquí puedes llamar a tu backend si lo deseas
-      // const res = await fetch("/api/subscribe", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ email }),
-      // })
-      // if (!res.ok) throw new Error("Error al enviar")
-      // Simulación de éxito:
-      await new Promise((r) => setTimeout(r, 800))
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) throw new Error("Error al enviar")
 
       setStatus("success")
       setMessage("¡Gracias! Te contactaremos pronto.")
@@ -49,7 +46,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[45vh] md:min-h-[90vh] flex items-center pt-2 pb-12 px-4 md:px-6 bg-gradient-to-b from-background via-background to-background/80"
+      className="min-h-[20vh] md:min-h-[90vh] flex items-center pt-2 pb-12 px-4 md:px-6 bg-gradient-to-b from-background via-background to-background/80"
     >
       <div className="max-w-5xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
