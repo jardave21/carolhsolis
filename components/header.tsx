@@ -17,10 +17,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
-  const handleLinkClick = () => {
-    setIsOpen(false)
-  }
-
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm w-full">
       <nav className="max-w-5xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between">
@@ -70,13 +66,13 @@ export default function Header() {
             href="#contact"
             className="px-4 py-2 bg-primary text-white rounded-full font-medium text-sm hover:bg-primary/90 transition-all"
           >
-            Contacto
+            Llámame
           </a>
         </div>
 
         {/* Mobile Menu Buttons */}
         <div className="flex items-center md:hidden">
-          <a href="#contact" className="p-2 text-primary" onClick={handleLinkClick}>
+          <a href="#contact" className="p-2 text-primary">
             <Phone className="w-6 h-6" />
           </a>
           <button
@@ -100,34 +96,31 @@ export default function Header() {
             <a
               href="#about"
               className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
-              onClick={handleLinkClick}
             >
               Sobre mí
             </a>
             <a
               href="#que-hago"
               className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
-              onClick={handleLinkClick}
             >
               ¿Qué hago?
             </a>
             <a
               href="#mis-temas"
               className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
-              onClick={handleLinkClick}
             >
               Mis temas
             </a>
             <a
               href="#libros"
               className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
-              onClick={handleLinkClick}
             >
               Libros
             </a>
             <div className="py-2">
               <PolloMensual />
             </div>
+
           </div>
         </div>
       )}
