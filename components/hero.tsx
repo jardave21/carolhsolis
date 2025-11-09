@@ -80,8 +80,8 @@ export default function Hero() {
                   placeholder="tu@correo.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none
-                             focus:ring-2 focus:ring-primary/40 focus:border-primary/60"
+                  className="flex-1 rounded-xl border border-orange-500 bg-background px-4 py-3 text-sm outline-none
+                             focus:ring-2 focus:ring-orange-500/40 focus:border-orange-500/60"
                   aria-invalid={email.length > 0 ? (!isValidEmail).toString() : undefined}
                   aria-describedby="email-help"
                   required
