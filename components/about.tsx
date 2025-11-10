@@ -10,16 +10,16 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">¿QUIÉN SOY?</h2>
             <div className="space-y-4 text-muted">
-              <p>Periodista con más de 25 años de experiencia.</p>
-              <p>Autora de la trilogía sobre desplazamiento forzado interno en México:</p>
+              <p><strong className="font-extrabold text-black"> Periodista </strong> con más de 25 años de experiencia.</p>
+              <p><strong className="font-extrabold text-black"> Autora </strong>  de la trilogía sobre desplazamiento forzado interno en México:</p>
               <ul className="list-disc list-inside pl-4">
                 <li>Nos están matando</li>
                 <li>No podemos habitar</li>
                 <li>Nos está tragando el mar</li>
               </ul>
-              <p>Reconocida como Agente de Cambio 2022 por la revista Quién.</p>
-              <p>Coautora del libro <em>Presidenta: más de 100 mujeres te escriben</em>.</p>
-              <p>Dog lover.</p>
+              <p>Reconocida como <strong className="font-extrabold text-black"> Agente de Cambio 2022 </strong>  por la revista Quién.</p>
+              <p><strong className="font-extrabold text-black"> Coautora  </strong>  del libro <em>"Presidenta: más de 100 mujeres te escriben"</em>.</p>
+              <p>Dog <strong className="font-extrabold text-black"> lover.</strong> </p>
             </div>
           </div>
 
