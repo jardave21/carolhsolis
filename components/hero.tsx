@@ -11,7 +11,6 @@ export default function Hero() {
   useEffect(() => setIsVisible(true), [])
 
   const isValidEmail = useMemo(() => {
-    // Validación sencilla; suficiente para front-end
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
   }, [email])
 
@@ -123,14 +122,13 @@ export default function Hero() {
             </form>
           </div>
 
-          {/* Derecha: foto + texto exterior */}
+          {/* Derecha: solo foto */}
           <div
             className={`flex justify-center transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <div className="relative w-64 h-80 md:w-80 md:h-96">
-              {/* Imagen con borde */}
               <div className="absolute inset-0 bg-white/30 backdrop-blur-lg rounded-3xl border border-white/50 overflow-hidden shadow-xl">
                 <img
                   src="/images/marca_personal2.jpg"
@@ -138,23 +136,6 @@ export default function Hero() {
                   className="w-full h-full object-cover object-top rounded-3xl"
                 />
               </div>
-
-              {/* Texto superior */}
-              <p className="absolute -top-8 left-1/2 -translate-x-1/2 text-black font-bold tracking-[0.3em] uppercase text-sm">
-                HOLA
-              </p>
-
-              {/* Texto derecho vertical */}
-              <p
-                className="absolute right-[-2.5rem] top-1/2 -translate-y-1/2 text-black font-bold tracking-[0.3em] uppercase text-sm"
-                style={{
-                  writingMode: "vertical-rl",
-                  textOrientation: "upright",
-                  letterSpacing: "0.2em",
-                }}
-              >
-                PRINCESAS
-              </p>
 
               {/* Elementos decorativos opcionales */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/20 rounded-full blur-3xl" />

@@ -19,14 +19,14 @@ const _inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Carolina 'Carol H.' Solís | Periodista y Creadora de Contenido",
+  title: "Carolina 'Carol H.' Solís | Periodista y Speakerq",
   description:
-    "Carolina 'Carol H.' Solís es una destacada periodista y generadora de contenidos mexicana con más de 20 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.",
+    "Carolina 'Carol H.' Solís es una destacada periodista y conferencista mexicana con más de 25 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.",
   generator: "v0.app",
   openGraph: {
-    title: "Carolina 'Carol H.' Solís | Periodista y Creadora de Contenido",
+    title: "Carolina 'Carol H.' Solís | Periodista y Speakerq",
     description:
-      "Con más de 20 años de experiencia, Carolina 'Carol H.' Solís es una voz influyente en el periodismo mexicano, enfocada en política, derechos humanos y feminismo.",
+      "Con más de 25 años de experiencia, Carolina 'Carol H.' Solís es una voz influyente en el periodismo mexicano, enfocada en política, derechos humanos y feminismo.",
     type: "website",
     images: [
       {

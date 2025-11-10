@@ -18,8 +18,8 @@ export default function About() {
                 <li>Nos está tragando el mar</li>
               </ul>
               <p>Reconocida como Agente de Cambio 2022 por la revista Quién.</p>
-              <p>Dog lover.</p>
               <p>Coautora del libro <em>Presidenta: más de 100 mujeres te escriben</em>.</p>
+              <p>Dog lover.</p>
             </div>
           </div>
 
@@ -80,6 +80,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">¿QUÉ HAGO?</h2>
             <ul className="list-disc list-inside space-y-2 text-muted">
+              <li>Master classes</li>
               <li>Conferencias</li>
               <li>Talleres</li>
               <li>Editorialista independiente</li>
