@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Youtube } from "lucide-react"
+import { Instagram, Facebook, Music2 } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -17,18 +17,17 @@ export default function Footer() {
             className="
               grid gap-10 md:gap-12 lg:gap-16
               grid-cols-1 sm:grid-cols-2 md:grid-cols-12
-              items-start  /* <- asegura alineación superior */
             "
           >
-            {/* Logo + descripción (7/12 en desktop) */}
-            <div className="md:col-span-7 min-w-0">
+            {/* Logo + descripción */}
+            <div className="md:col-span-7 min-w-0 items-start">
               <Link href="/" className="inline-flex items-center gap-3 mb-5">
                 <Image
                   src="/logo.png"
                   alt="Logo de Carol H. Solís"
                   width={96}
                   height={96}
-                  className="h-16 w-auto md:h-20 block shrink-0"  /* <- block para quitar baseline y shrink control */
+                  className="h-16 w-auto md:h-20 block shrink-0"
                   priority={false}
                 />
                 <span className="sr-only">Ir al inicio</span>
@@ -36,24 +35,37 @@ export default function Footer() {
 
               <div className="text-white/80 leading-relaxed tracking-[0.005em] max-w-prose">
                 <p>
-                  <strong className="font-extrabold text-white">Habla</strong> con la fuerza de quien convierte la palabra en acto de resistencia,
-                  <strong className="font-extrabold text-white"> Observa</strong> el mundo con mirada crítica y compasiva,
-                  <strong className="font-extrabold text-white"> Lleva</strong> más de 25 años contando historias que transforman,
-                  <strong className="font-extrabold text-white"> Ama</strong> la verdad aunque duela,
-                  <strong className="font-extrabold text-white"> Piensa</strong> con libertad y sin miedo,
-                  <strong className="font-extrabold text-white"> Reconoce</strong> en cada voz una posibilidad de cambio,
-                  <strong className="font-extrabold text-white"> Inspira</strong> a mirar lo que otros evaden,
-                  <strong className="font-extrabold text-white"> Nombra</strong> lo que el silencio intenta ocultar,
-                  <strong className="font-extrabold text-white"> Crea</strong> espacios para el diálogo,
-                  <strong className="font-extrabold text-white"> Escucha</strong> con empatía,
-                  <strong className="font-extrabold text-white"> Siente</strong> cada historia como propia,
-                  <strong className="font-extrabold text-white"> Abraza</strong> la diversidad y
-                  <strong className="font-extrabold text-white"> Sostiene</strong> la convicción de que la palabra puede mover el mundo.
+                  <strong className="font-extrabold text-white">Habla</strong>{" "}
+                  con la fuerza de quien convierte la palabra en acto de resistencia,{" "}
+                  <strong className="font-extrabold text-white">Observa</strong>{" "}
+                  el mundo con mirada crítica y compasiva,{" "}
+                  <strong className="font-extrabold text-white">Lleva</strong>{" "}
+                  más de 25 años contando historias que transforman,{" "}
+                  <strong className="font-extrabold text-white">Ama</strong>{" "}
+                  la verdad aunque duela,{" "}
+                  <strong className="font-extrabold text-white">Piensa</strong>{" "}
+                  con libertad y sin miedo,{" "}
+                  <strong className="font-extrabold text-white">Reconoce</strong>{" "}
+                  en cada voz una posibilidad de cambio,{" "}
+                  <strong className="font-extrabold text-white">Inspira</strong>{" "}
+                  a mirar lo que otros evaden,{" "}
+                  <strong className="font-extrabold text-white">Nombra</strong>{" "}
+                  lo que el silencio intenta ocultar,{" "}
+                  <strong className="font-extrabold text-white">Crea</strong>{" "}
+                  espacios para el diálogo,{" "}
+                  <strong className="font-extrabold text-white">Escucha</strong>{" "}
+                  con empatía,{" "}
+                  <strong className="font-extrabold text-white">Siente</strong>{" "}
+                  cada historia como propia,{" "}
+                  <strong className="font-extrabold text-white">Abraza</strong>{" "}
+                  la diversidad y{" "}
+                  <strong className="font-extrabold text-white">Sostiene</strong>{" "}
+                  la convicción de que la palabra puede mover el mundo.
                 </p>
               </div>
             </div>
 
-            {/* Navegación (3/12) */}
+            {/* Navegación */}
             <nav aria-label="Navegación del sitio" className="md:col-span-3 min-w-0">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4">
                 Navegación
@@ -65,43 +77,62 @@ export default function Footer() {
               </ul>
             </nav>
 
-            {/* Contacto / Redes (2/12) */}
+            {/* Contacto / Redes */}
             <div className="md:col-span-2 min-w-0">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4">
                 Contacto
               </h3>
-            <ul className="space-y-2 text-white/80 mb-6">
-  <li>
-    <a
-      href="mailto:hola@carolhsolis.com.mx"
-      className="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap"
-    >
-      hola@carolhsolis.com.mx
-    </a>
-  </li>
-</ul>
+
+              <address className="not-italic">
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>
+                    <a
+                      href="mailto:hola@carolhsolis.com.mx"
+                      className="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap"
+                    >
+                      hola@carolhsolis.com.mx
+                    </a>
+                  </li>
+                </ul>
+              </address>
 
               <h4 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
                 Redes
               </h4>
-              <div className="flex items-center gap-3">
+
+              {/* Íconos alineados en una fila */}
+              <div className="flex items-center gap-4">
+                {/* Instagram */}
                 <a
                   href="https://www.instagram.com/carolhsolis/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram de Carol H. Solís"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 transition shrink-0"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/30 transition"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
+
+                {/* Facebook */}
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/Carolhsolis/61561360989498/#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="YouTube de Carol H. Solís"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 transition shrink-0"
+                  aria-label="Facebook de Carol H. Solís"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/30 transition"
                 >
-                  <Youtube className="h-5 w-5" />
+                  <Facebook className="h-5 w-5" />
+                </a>
+
+                {/* TikTok */}
+                <a
+                  href="https://www.tiktok.com/@carolhsolis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok de Carol H. Solís"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 hover:text-white hover:border-white/30 transition"
+                >
+                  <Music2 className="h-5 w-5" />
                 </a>
               </div>
             </div>
@@ -116,7 +147,6 @@ export default function Footer() {
 
           <div className="order-1 md:order-2 flex items-center gap-2">
             <span>Powered by</span>
-            {/* URL absoluta con protocolo para evitar redirecciones raras */}
             <a
               href="https://www.finviacorp.com/"
               className="font-medium hover:text-white hover:underline underline-offset-4 transition-colors"
