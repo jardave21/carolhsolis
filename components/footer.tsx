@@ -115,7 +115,7 @@ export default function Footer() {
 
                 {/* Facebook */}
                 <a
-                  href="https://www.facebook.com/people/Carolhsolis/61561360989498/#"
+                  href="https://www.facebook.com/carolhsolis/#"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook de Carol H. Solís"
