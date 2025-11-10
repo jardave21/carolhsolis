@@ -47,7 +47,7 @@ export default function Testimonials() {
     <section id="testimonials" ref={ref} className="py-20 px-4 md:px-6 bg-background">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-poppins text-foreground mb-4">Testimonios</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-anton text-foreground mb-4">Testimonios</h2>
           <p className="text-lg text-muted">Historias de transformación</p>
         </div>
 
@@ -60,11 +60,11 @@ export default function Testimonials() {
               ))}
             </div>
 
-            <p className="text-lg text-foreground mb-8 leading-relaxed italic">"{testimonials[current].text}"</p>
+            <p className="text-lg text-foreground mb-8 leading-relaxed italic font-open-sans">"{testimonials[current].text}"</p>
 
-            <div className="border-t border-border pt-6">
-              <p className="font-bold text-foreground">{testimonials[current].name}</p>
-              <p className="text-muted text-sm">{testimonials[current].role}</p>
+            <div className="border-t border-border pt-6 font-open-sans">
+              <p className="font-bold text-foreground font-open-sans">{testimonials[current].name}</p>
+              <p className="text-muted text-sm font-open-sans">{testimonials[current].role}</p>
             </div>
           </div>
 

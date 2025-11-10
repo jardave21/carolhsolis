@@ -5,11 +5,11 @@ export default function About() {
     <section id="about" className="py-20 px-4 md:px-6 bg-white scroll-mt-40">
       <div className="max-w-5xl mx-auto space-y-24">
         {/* ¿Quién Soy? */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-center font-open-sans">
           {/* Texto */}
           <div>
-            <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">¿QUIÉN SOY?</h2>
-            <div className="space-y-4 text-muted">
+            <h2 className="text-3xl font-bold font-anton text-foreground mb-6">¿QUIÉN SOY?</h2>
+            <div className="space-y-4 text-muted font-open-sans">
               <p><strong className="font-extrabold text-black"> Periodista </strong> con más de 25 años de experiencia.</p>
               <p><strong className="font-extrabold text-black"> Autora </strong>  de la trilogía sobre desplazamiento forzado interno en México:</p>
               <ul className="list-disc list-inside pl-4">
@@ -77,9 +77,9 @@ export default function About() {
           </div>
 
           {/* Texto izquierda */}
-          <div>
-            <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">¿QUÉ HAGO?</h2>
-            <ul className="list-disc list-inside space-y-2 text-muted">
+          <div className="font-open-sans">
+            <h2 className="text-3xl font-bold font-anton text-foreground mb-6">¿QUÉ HAGO?</h2>
+            <ul className="list-disc list-inside space-y-2 text-muted font-open-sans">
               <li>Master classes</li>
               <li>Conferencias</li>
               <li>Talleres</li>
@@ -93,8 +93,8 @@ export default function About() {
 
         {/* Mis Temas */}
         <div id="mis-temas" className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40">
-          {/* Texto */}
-          <div>
+          {/* Texto */} 
+          <div className="font-open-sans">
             <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">MIS TEMAS</h2>
             <ul className="list-disc list-inside space-y-2 text-muted">
               <li>Análisis político</li>
@@ -133,12 +133,12 @@ export default function About() {
         {/* Quote */}
         <div className="pt-8 text-center">
           <blockquote className="text-xl italic text-foreground relative">
-            <p>
+            <p className="font-open-sans">
               “Busco abrir el diálogo sobre los temas que generalmente no nos gusta hablar y
               aterrizarlos sin tanto rollo. Ponerlos sobre la mesa sin filtros y sin sutilezas,
               accesibles y desde una perspectiva simple que ayude a cuestionarnos.”
             </p>
-            <footer className="mt-4 not-italic font-medium text-muted">— Carol H. Solís</footer>
+            <footer className="mt-4 not-italic font-medium text-muted font-open-sans">— Carol H. Solís</footer>
           </blockquote>
         </div>
       </div>

@@ -22,18 +22,11 @@ export default function Footer() {
             {/* Logo + descripción */}
             <div className="md:col-span-7 min-w-0 items-start">
               <Link href="/" className="inline-flex items-center gap-3 mb-5">
-                <Image
-                  src="/logo.png"
-                  alt="Logo de Carol H. Solís"
-                  width={96}
-                  height={96}
-                  className="h-16 w-auto md:h-20 block shrink-0"
-                  priority={false}
-                />
+                <Image src="/logo.png" alt="Logo de Carol H. Solís" width={96} height={96} className="h-16 w-auto md:h-20 block shrink-0" priority={false} />
                 <span className="sr-only">Ir al inicio</span>
               </Link>
 
-              <div className="text-white/80 leading-relaxed tracking-[0.005em] max-w-prose">
+              <div className="text-white/80 leading-relaxed tracking-[0.005em] max-w-prose font-open-sans">
                 <p>
                   <strong className="font-extrabold text-white">Habla</strong>{" "}
                   con la fuerza de quien convierte la palabra en acto de resistencia,{" "}
@@ -67,13 +60,13 @@ export default function Footer() {
 
             {/* Navegación */}
             <nav aria-label="Navegación del sitio" className="md:col-span-3 min-w-0">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4 font-anton">
                 Navegación
               </h3>
-              <ul className="grid grid-cols-1 gap-2 text-white/80">
-                <li><a href="#home" className="hover:text-white hover:underline underline-offset-4 transition-colors">Inicio</a></li>
-                <li><a href="#about" className="hover:text-white hover:underline underline-offset-4 transition-colors">Sobre mí</a></li>
-                <li><a href="#topics" className="hover:text-white hover:underline underline-offset-4 transition-colors">Mis temas</a></li>
+              <ul className="grid grid-cols-1 gap-2 text-white/80 font-open-sans">
+                <li><a href="#home" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Inicio</a></li>
+                <li><a href="#about" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Sobre mí</a></li>
+                <li><a href="#topics" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Mis temas</a></li>
               </ul>
             </nav>
 
@@ -83,7 +76,7 @@ export default function Footer() {
                 Contacto
               </h3>
 
-              <address className="not-italic">
+              <address className="not-italic font-open-sans">
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>
                     <a
@@ -96,7 +89,7 @@ export default function Footer() {
                 </ul>
               </address>
 
-              <h4 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-3">
+              <h4 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-3 font-anton">
                 Redes
               </h4>
 
@@ -142,10 +135,10 @@ export default function Footer() {
 
       {/* Bottom strip */}
       <div className="bg-black/10">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
-          <p className="order-2 md:order-1">© {currentYear} Todos los derechos reservados.</p>
+        <div className="mx-auto max-w-6xl px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70 font-open-sans">
+          <p className="order-2 md:order-1 font-open-sans">© {currentYear} Todos los derechos reservados.</p>
 
-          <div className="order-1 md:order-2 flex items-center gap-2">
+          <div className="order-1 md:order-2 flex items-center gap-2 font-open-sans">
             <span>Powered by</span>
             <a
               href="https://www.finviacorp.com/"

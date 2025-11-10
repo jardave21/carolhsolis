@@ -42,12 +42,12 @@ export default function EmailCapture() {
             <Mail className="w-8 h-8 text-primary" />
           </div>
 
-          <h2 className="text-2xl font-bold font-poppins text-foreground text-center mb-2">Mantente conectado</h2>
-          <p className="text-sm text-muted text-center mb-6">
+          <h2 className="text-2xl font-bold font-anton text-foreground text-center mb-2">Mantente conectado</h2>
+          <p className="text-sm text-muted text-center mb-6 font-open-sans">
             Recibe las últimas conferencias, análisis y contenido de Carol.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 font-open-sans">
             <input
               type="email"
               placeholder="tu@email.com"
@@ -61,7 +61,7 @@ export default function EmailCapture() {
             <button
               type="submit"
               disabled={isLoading || isSuccess || !email}
-              className="w-full px-4 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full px-4 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-open-sans"
             >
               {isSuccess ? (
                 <>
@@ -75,8 +75,8 @@ export default function EmailCapture() {
               )}
             </button>
           </form>
-
-          <p className="text-xs text-muted text-center mt-4">No compartimos tu email. Respetamos tu privacidad.</p>
+          
+          <p className="text-xs text-muted text-center mt-4 font-open-sans">No compartimos tu email. Respetamos tu privacidad.</p>
         </div>
       </div>
     </section>

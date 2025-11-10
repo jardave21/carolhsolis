@@ -31,7 +31,7 @@ export default function SocialIntegration() {
         <div className="mb-20">
           <div className="flex items-center gap-2 mb-8">
             <Instagram className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold font-poppins text-foreground">Sígueme en Instagram</h2>
+            <h2 className="text-3xl font-bold font-anton text-foreground">Sígueme en Instagram</h2>
           </div>
 
           <div
@@ -44,7 +44,7 @@ export default function SocialIntegration() {
                 key={post}
                 className="aspect-square rounded-lg overflow-hidden hover-elevate cursor-pointer bg-gradient-to-br from-primary/20 to-secondary/20 hover:shadow-lg transition-all"
               >
-                <div className="w-full h-full flex items-center justify-center">
+                <div className="w-full h-full flex items-center justify-center font-open-sans">
                   <span className="text-muted">Post {post}</span>
                 </div>
               </div>
@@ -53,17 +53,17 @@ export default function SocialIntegration() {
 
           <a
             href="#"
-            className="inline-block mt-6 px-6 py-2 text-primary font-medium hover:text-primary/80 transition-colors"
+            className="inline-block mt-6 px-6 py-2 text-primary font-medium hover:text-primary/80 transition-colors font-open-sans"
           >
             Ver más en Instagram →
           </a>
         </div>
 
         {/* YouTube Video */}
-        <div>
+        <div className="font-open-sans">
           <div className="flex items-center gap-2 mb-8">
             <Youtube className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold font-poppins text-foreground">Último video</h2>
+            <h2 className="text-3xl font-bold font-anton text-foreground">Último video</h2>
           </div>
 
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
@@ -73,7 +73,7 @@ export default function SocialIntegration() {
                   <div className="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 font-open-sans">
                 <h3 className="text-lg font-bold font-poppins text-foreground mb-2">{youtubeVideo.title}</h3>
                 <a
                   href="#"

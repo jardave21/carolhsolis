@@ -55,16 +55,16 @@ export default function Hero() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h1 className="text-5xl md:text-6xl font-bold font-poppins text-foreground leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold font-anton text-foreground leading-tight">
               CAROL H. SOLIS
             </h1>
-            <p className="mt-2 text-lg text-muted font-inter leading-relaxed md:whitespace-nowrap">
+            <p className="mt-2 text-lg text-muted font-open-sans leading-relaxed md:whitespace-nowrap">
               PERIODISTA / ANALISTA POLÍTICA / ACTIVISTA / ESCRITORA
             </p>
 
             {/* Formulario correo */}
             <form onSubmit={onSubmit} className="mt-6">
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2 font-open-sans">
                 Déjame tu correo y te escribo:
               </label>
               <div className="flex w-full max-w-md gap-2">
@@ -76,7 +76,7 @@ export default function Hero() {
                   placeholder="tu@correo.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 rounded-xl border border-orange-500 bg-background px-4 py-3 text-sm outline-none
+                  className="flex-1 rounded-xl border border-orange-500 bg-background px-4 py-3 text-sm outline-none font-open-sans
                              focus:ring-2 focus:ring-orange-500/40 focus:border-orange-500/60"
                   aria-invalid={email.length > 0 ? (!isValidEmail).toString() : undefined}
                   aria-describedby="email-help"
@@ -85,7 +85,7 @@ export default function Hero() {
                 <button
                   type="submit"
                   disabled={status === "loading" || !isValidEmail}
-                  className="rounded-xl px-4 py-3 text-sm font-semibold bg-primary text-primary-foreground
+                  className="rounded-xl px-4 py-3 text-sm font-semibold bg-primary text-primary-foreground font-open-sans
                              disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {status === "loading" ? (
@@ -107,7 +107,7 @@ export default function Hero() {
                   )}
                 </button>
               </div>
-              <p id="email-help" className="mt-2 text-xs text-muted">
+              <p id="email-help" className="mt-2 text-xs text-muted font-open-sans">
                 Solo usaré tu correo para contactarte.
               </p>
               {status !== "idle" && message && (
