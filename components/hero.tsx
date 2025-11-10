@@ -122,13 +122,13 @@ export default function Hero() {
             </form>
           </div>
 
-          {/* Derecha: solo foto */}
+          {/* Derecha: foto principal más alta */}
           <div
             className={`flex justify-center transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative w-64 h-80 md:w-80 md:h-140">
+            <div className="relative w-64 h-96 md:w-96 md:h-[32rem]">
               <div className="absolute inset-0 bg-white/30 backdrop-blur-lg rounded-3xl border border-white/50 overflow-hidden shadow-xl">
                 <img
                   src="/images/marca_personal2.jpg"
