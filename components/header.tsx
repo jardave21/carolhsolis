@@ -47,25 +47,25 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8">
           <a
             href="#about" 
-            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary font-open-sans"
+            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary"
           >
             Sobre mí
           </a>
           <a
             href="#que-hago" 
-            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary font-open-sans"
+            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary"
           >
             ¿Qué hago?
           </a>
           <a
             href="#mis-temas" 
-            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary font-open-sans"
+            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary"
           >
             Mis temas
           </a>
           <a
             href="#libros" 
-            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary font-open-sans"
+            className="text-sm text-foreground transition-colors px-3 py-1 rounded-md hover:bg-transparent hover:border hover:border-primary hover:text-primary"
           >
             Libros
           </a>
@@ -76,7 +76,7 @@ export default function Header() {
         <div className="hidden md:flex">
           <a
             href="#contact"
-            className="px-4 py-2 bg-primary text-white rounded-full font-medium text-sm hover:bg-primary/90 transition-all font-open-sans"
+            className="px-4 py-2 bg-primary text-white rounded-full text-sm hover:bg-primary/90 transition-all"
           >
             Contacto
           </a>
@@ -107,28 +107,28 @@ export default function Header() {
           <div className="max-w-5xl mx-auto px-4 py-4 space-y-3">
             <a 
               href="#about" 
-              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors font-open-sans"
+              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
               onClick={handleLinkClick}
             >
               Sobre mí
             </a>
             <a 
               href="#que-hago" 
-              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors font-open-sans"
+              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
               onClick={handleLinkClick}
             >
               ¿Qué hago?
             </a>
             <a 
               href="#mis-temas" 
-              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors font-open-sans"
+              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
               onClick={handleLinkClick}
             >
               Mis temas
             </a>
             <a 
               href="#libros" 
-              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors font-open-sans"
+              className="block text-sm text-foreground py-2 hover:text-foreground transition-colors"
               onClick={handleLinkClick}
             >
               Libros

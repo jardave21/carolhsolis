@@ -24,13 +24,13 @@ export default function ConversionBlock() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       > 
-        <h2 className="text-3xl md:text-4xl font-bold font-anton mb-4">¿Lista para transformar tu voz?</h2>
+        <h2 className="text-3xl md:text-4xl  font-anton mb-4">¿Lista para transformar tu voz?</h2>
         <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto font-open-sans">
           Descubre cómo una conferencia o taller puede cambiar tu forma de comunicar y de ser escuchada.
         </p>
         <a
           href="#contact"
-          className="inline-block px-8 py-3 bg-white text-primary rounded-full font-bold hover:bg-white/90 transition-all hover-elevate font-open-sans"
+          className="inline-block px-8 py-3 bg-white text-primary rounded-full  hover:bg-white/90 transition-all hover-elevate font-open-sans"
         >
           Agenda tu sesión hoy
         </a>

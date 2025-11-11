@@ -1,21 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Poppins, Inter } from "next/font/google"
+import { Anton, Open_Sans } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _poppins = Poppins({
+const anton = Anton({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400"],
+  variable: "--font-anton",
 })
-const _inter = Inter({
+
+const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  weight: ["400", "600", "700"],
+  variable: "--font-open-sans",
 })
 
 export const metadata: Metadata = {
@@ -49,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${anton.variable} ${openSans.variable}`}>
       <body className={`font-sans antialiased flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-1 pt-[96px]">

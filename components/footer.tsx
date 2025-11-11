@@ -60,7 +60,7 @@ export default function Footer() {
 
             {/* Navegación */}
             <nav aria-label="Navegación del sitio" className="md:col-span-3 min-w-0">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4 font-anton">
+              <h3 className="text-sm  uppercase tracking-wide text-white/70 mb-4 font-open-sans">
                 Navegación
               </h3>
               <ul className="grid grid-cols-1 gap-2 text-white/80 font-open-sans">
@@ -72,7 +72,7 @@ export default function Footer() {
 
             {/* Contacto / Redes */}
             <div className="md:col-span-2 min-w-0">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-4">
+              <h3 className="text-sm  uppercase tracking-wide text-white/70 mb-4">
                 Contacto
               </h3>
 
@@ -89,7 +89,7 @@ export default function Footer() {
                 </ul>
               </address>
 
-              <h4 className="text-sm font-semibold uppercase tracking-wide text-white/70 mb-3 font-anton">
+              <h4 className="text-sm  uppercase tracking-wide text-white/70 mb-3 font-anton">
                 Redes
               </h4>
 
