@@ -31,7 +31,7 @@ export default function SocialIntegration() {
         <div className="mb-20">
           <div className="flex items-center gap-2 mb-8">
             <Instagram className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold font-anton text-foreground">Sígueme en Instagram</h2>
+            <h2 className="text-3xl  font-anton text-foreground">Sígueme en Instagram</h2>
           </div>
 
           <div
@@ -63,7 +63,7 @@ export default function SocialIntegration() {
         <div className="font-open-sans">
           <div className="flex items-center gap-2 mb-8">
             <Youtube className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold font-anton text-foreground">Último video</h2>
+            <h2 className="text-3xl  font-anton text-foreground">Último video</h2>
           </div>
 
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
@@ -74,7 +74,7 @@ export default function SocialIntegration() {
                 </div>
               </div>
               <div className="p-6 font-open-sans">
-                <h3 className="text-lg font-bold font-poppins text-foreground mb-2">{youtubeVideo.title}</h3>
+                <h3 className="text-lg  font-poppins text-foreground mb-2">{youtubeVideo.title}</h3>
                 <a
                   href="#"
                   className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors"

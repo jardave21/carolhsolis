@@ -23,7 +23,7 @@ export function PolloMensual() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold font-anton">Te invita a:</DialogTitle>
+          <DialogTitle className="text-center text-2xl  font-anton">Te invita a:</DialogTitle>
           <DialogDescription className="text-center text-lg font-open-sans">
             Aportar al pollo mensual
           </DialogDescription>

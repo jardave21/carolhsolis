@@ -4,7 +4,7 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-20 px-4 md:px-6 bg-background scroll-mt-24">
       <div className="max-w-3xl mx-auto text-center font-open-sans">
-        <h2 className="text-3xl font-bold font-anton text-foreground mb-4">¿Te interesa?</h2>
+        <h2 className="text-3xl  font-anton text-foreground mb-4">¿Te interesa?</h2>
         <p className="text-lg text-muted mb-8 font-open-sans">Mándame un WhatsApp</p>
         <div className="space-y-4">
           <a

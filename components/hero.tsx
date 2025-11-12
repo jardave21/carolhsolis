@@ -55,7 +55,7 @@ export default function Hero() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h1 className="text-5xl md:text-6xl font-bold font-anton text-foreground leading-tight">
+            <h1 className="text-5xl md:text-6xl font-anton text-foreground leading-tight">
               CAROL H. SOLIS
             </h1>
             <p className="mt-2 text-lg text-muted font-open-sans leading-relaxed md:whitespace-nowrap">

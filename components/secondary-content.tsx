@@ -12,7 +12,7 @@ export default function SecondaryContent() {
       <div className="max-w-5xl mx-auto">
         {/* Books Section */} 
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold font-anton text-foreground mb-4">Mis Libros</h2>
+          <h2 className="text-3xl  font-anton text-foreground mb-4">Mis Libros</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-open-sans">
             Autora de la trilogía sobre desplazamiento forzado interno en México.
           </p>

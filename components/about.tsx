@@ -8,32 +8,29 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-10 items-center font-open-sans">
           {/* Texto */}
           <div>
-            <h2 className="text-3xl font-bold font-anton text-foreground mb-6">¿QUIÉN SOY?</h2>
+            <h2 className="text-5xl font-anton text-foreground mb-6">¿QUIÉN SOY?</h2>
             <div className="space-y-4 text-muted font-open-sans">
-              <p><strong className="font-extrabold text-black"> Periodista </strong> con más de 25 años de experiencia.</p>
-              <p><strong className="font-extrabold text-black"> Autora </strong>  de la trilogía sobre desplazamiento forzado interno en México:</p>
+              <p><strong className="font-extrabold text-black">Periodista</strong> con más de 25 años de experiencia.</p>
+              <p><strong className="font-extrabold text-black">Autora</strong> de la trilogía sobre desplazamiento forzado interno en México:</p>
               <ul className="list-disc list-inside pl-4">
                 <li>Nos están matando</li>
                 <li>No podemos habitar</li>
                 <li>Nos está tragando el mar</li>
               </ul>
-              <p>Reconocida como <strong className="font-extrabold text-black"> Agente de Cambio 2022 </strong>  por la revista Quién.</p>
-              <p><strong className="font-extrabold text-black"> Coautora  </strong>  del libro <em>"Presidenta: más de 100 mujeres te escriben"</em>.</p>
-              <p>Dog <strong className="font-extrabold text-black"> lover.</strong> </p>
+              <p>Reconocida como <strong className="font-extrabold text-black">Agente de Cambio 2022</strong> por la revista Quién.</p>
+              <p><strong className="font-extrabold text-black">Coautora</strong> del libro <em>"Presidenta: más de 100 mujeres te escriben"</em>.</p>
+              <p>Dog <strong className="font-extrabold text-black">lover.</strong></p>
             </div>
           </div>
 
-          {/* Imagen derecha – estable, sin “bajarse” en desktop */}
-          <div className="w-full">
-            <div className="w-full rounded-3xl shadow-lg overflow-hidden bg-white border border-border/40">
-              {/* Mantén proporción y evita recortes feos */}
-              <div className="aspect-[5/4]">
-                <img
-                  src="/images/foto.jpg"
-                  alt="Carol H. Solís"
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
+          {/* Imagen derecha – sin recortes, tamaño natural */}
+          <div className="w-full md:flex md:justify-end">
+            <div className="rounded-3xl shadow-lg bg-white border border-border/40 p-2 overflow-hidden">
+              <img
+                src="/images/foto.jpg"
+                alt="Carol H. Solís"
+                className="block mx-auto w-full h-auto max-h-[580px] object-contain"
+              />
             </div>
           </div>
         </div>
@@ -63,7 +60,7 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Card ancha inferior (no se corta) */}
+              {/* Card ancha inferior */}
               <div className="col-span-2 rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
                 <div className="aspect-video">
                   <img
@@ -78,7 +75,7 @@ export default function About() {
 
           {/* Texto izquierda */}
           <div className="font-open-sans">
-            <h2 className="text-3xl font-bold font-anton text-foreground mb-6">¿QUÉ HAGO?</h2>
+            <h2 className="text-5xl font-anton text-foreground mb-6">¿QUÉ HAGO?</h2>
             <ul className="list-disc list-inside space-y-2 text-muted font-open-sans">
               <li>Master classes</li>
               <li>Conferencias</li>
@@ -93,9 +90,9 @@ export default function About() {
 
         {/* Mis Temas */}
         <div id="mis-temas" className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40">
-          {/* Texto */} 
+          {/* Texto */}
           <div className="font-open-sans">
-            <h2 className="text-3xl font-bold font-poppins text-foreground mb-6">MIS TEMAS</h2>
+            <h2 className="text-4xl font-poppins text-foreground mb-6">MIS TEMAS</h2>
             <ul className="list-disc list-inside space-y-2 text-muted">
               <li>Análisis político</li>
               <li>Racismo, clasismo y desigualdad</li>
@@ -105,7 +102,7 @@ export default function About() {
             </ul>
           </div>
 
-          {/* Dos thumbs lado a lado, misma altura */}
+          {/* Dos thumbs lado a lado */}
           <div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
@@ -130,7 +127,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Quote */}
+        {/* Cita final */}
         <div className="pt-8 text-center">
           <blockquote className="text-xl italic text-foreground relative">
             <p className="font-open-sans">
@@ -138,7 +135,9 @@ export default function About() {
               aterrizarlos sin tanto rollo. Ponerlos sobre la mesa sin filtros y sin sutilezas,
               accesibles y desde una perspectiva simple que ayude a cuestionarnos.”
             </p>
-            <footer className="mt-4 not-italic font-medium text-muted font-open-sans">— Carol H. Solís</footer>
+            <footer className="mt-4 not-italic font-medium text-muted font-open-sans">
+              — Carol H. Solís
+            </footer>
           </blockquote>
         </div>
       </div>
