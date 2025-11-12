@@ -45,7 +45,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 bg-white overflow-hidden"
     >
-      {/* Fondo con textura o patrón suave */}
+      {/* Fondo con textura */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10">
@@ -58,10 +58,10 @@ export default function Hero() {
           <h1
             className="text-[3.5rem] md:text-[6rem] font-anton uppercase leading-none tracking-tight text-[#ffde59]"
             style={{
-              WebkitTextStroke: "1px black",
+              WebkitTextStroke: "0.6px black", // 🔹 Contorno más fino
               textShadow: `
-                0px 2px 4px rgba(0, 0, 0, 0.25),   /* sombra inferior difusa */
-                0px 1px 2px rgba(0, 0, 0, 0.15)    /* refuerzo suave para volumen */
+                0px 2px 3px rgba(0, 0, 0, 0.20), 
+                0px 1px 1px rgba(0, 0, 0, 0.15)
               `,
             }}
           >
