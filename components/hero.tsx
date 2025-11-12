@@ -126,7 +126,7 @@ export default function Hero() {
         >
           <div className="relative w-64 h-96 md:w-[24rem] md:h-[34rem]">
             <img
-              src="/images/marca_personal2.jpg"
+              src="/images/marca_personal3.jpg"
               alt="Carol H. Solís"
               className="w-full h-full object-cover object-top rounded-3xl border border-white shadow-2xl grayscale"
             />
