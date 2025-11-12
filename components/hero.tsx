@@ -56,11 +56,12 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="text-[3.5rem] md:text-[6rem] font-anton text-[#ffde59] leading-none tracking-tight drop-shadow-[2px_2px_4px_rgba(0,0,0,0.2)]"
-            style={{ textTransform: "uppercase" }}
+            className="text-[3.5rem] md:text-[6rem] font-anton leading-none tracking-tight uppercase text-[#ffde59]
+                       [text-shadow:_-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000,2px_2px_0_#000]"
           >
             CAROL H. SOLIS
           </h1>
+
           <p className="mt-3 text-lg md:text-xl tracking-[0.3em] font-open-sans text-black">
             PERIODISTA
           </p>
