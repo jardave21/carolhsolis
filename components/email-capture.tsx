@@ -42,7 +42,7 @@ export default function EmailCapture() {
             <Mail className="w-8 h-8 text-primary" />
           </div>
 
-          <h2 className="text-2xl  font-anton text-foreground text-center mb-2">Mantente conectado</h2>
+          <h2 className="text-2xl  font-anton text-center mb-2">Mantente conectado</h2>
           <p className="text-sm text-muted text-center mb-6 font-open-sans">
             Recibe las últimas conferencias, análisis y contenido de Carol.
           </p>

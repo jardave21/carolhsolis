@@ -89,7 +89,7 @@ export default function Footer() {
                 </ul>
               </address>
 
-              <h4 className="text-sm  uppercase tracking-wide text-white/70 mb-3 font-anton">
+              <h4 className="text-sm  uppercase tracking-wide mb-3 font-anton">
                 Redes
               </h4>
 

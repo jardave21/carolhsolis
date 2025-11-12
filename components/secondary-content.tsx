@@ -12,7 +12,7 @@ export default function SecondaryContent() {
       <div className="max-w-5xl mx-auto">
         {/* Books Section */} 
         <div className="text-center mb-16">
-          <h2 className="text-3xl  font-anton text-foreground mb-4">Mis Libros</h2>
+          <h2 className="text-3xl  font-anton mb-4">Mis Libros</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-open-sans">
             Autora de la trilogía sobre desplazamiento forzado interno en México.
           </p>
@@ -22,7 +22,7 @@ export default function SecondaryContent() {
             <div key={book.title} className="text-center p-4 border-2 border-transparent hover:border-primary transition-all duration-300 rounded-lg font-open-sans">
               <a href={book.link} target="_blank" rel="noopener noreferrer">
                 <img src={book.image} alt={book.title} className="w-full h-auto rounded-lg shadow-lg mb-4" />
-                <h3 className="text-lg font-medium text-foreground">{book.title}</h3>
+                <h3 className="text-lg font-medium">{book.title}</h3>
               </a>
             </div>
           ))}

@@ -8,7 +8,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-10 items-center font-open-sans">
           {/* Texto */}
           <div>
-            <h2 className="text-5xl font-anton text-foreground mb-6">¿QUIÉN SOY?</h2>
+            <h2 className="text-5xl font-anton text-[#c0211f] mb-6">¿QUIÉN SOY?</h2>
             <div className="space-y-4 text-muted font-open-sans">
               <p><strong className="font-extrabold text-black">Periodista</strong> con más de 25 años de experiencia.</p>
               <p><strong className="font-extrabold text-black">Autora</strong> de la trilogía sobre desplazamiento forzado interno en México:</p>
@@ -75,7 +75,7 @@ export default function About() {
 
           {/* Texto izquierda */}
           <div className="font-open-sans">
-            <h2 className="text-5xl font-anton text-foreground mb-6">¿QUÉ HAGO?</h2>
+            <h2 className="text-5xl font-anton text-[#c0211f] mb-6">¿QUÉ HAGO?</h2>
             <ul className="list-disc list-inside space-y-2 text-muted font-open-sans">
               <li>Master classes</li>
               <li>Conferencias</li>
@@ -92,7 +92,7 @@ export default function About() {
         <div id="mis-temas" className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40">
           {/* Texto */}
           <div className="font-open-sans">
-            <h2 className="text-4xl font-poppins text-foreground mb-6">MIS TEMAS</h2>
+            <h2 className="text-5xl font-anton text-[#c0211f] mb-6">MIS TEMAS</h2>
             <ul className="list-disc list-inside space-y-2 text-muted">
               <li>Análisis político</li>
               <li>Racismo, clasismo y desigualdad</li>
@@ -129,7 +129,7 @@ export default function About() {
 
         {/* Cita final */}
         <div className="pt-8 text-center">
-          <blockquote className="text-xl italic text-foreground relative">
+          <blockquote className="text-xl italic relative">
             <p className="font-open-sans">
               “Busco abrir el diálogo sobre los temas que generalmente no nos gusta hablar y
               aterrizarlos sin tanto rollo. Ponerlos sobre la mesa sin filtros y sin sutilezas,

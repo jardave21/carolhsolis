@@ -11,7 +11,8 @@
   --card-foreground: #0f172a;
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  --primary: #ff6b6b;
+  --title-color: #c0211f;
+  --primary: #fb5005;
   --primary-foreground: #ffffff;
   --secondary: #e9b949;
   --secondary-foreground: #0f172a;
@@ -23,7 +24,7 @@
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #ff6b6b;
+  --ring: #fc9b03;
   --chart-1: #ff6b6b;
   --chart-2: #e9b949;
   --chart-3: #6b7280;
@@ -47,7 +48,8 @@
   --card-foreground: #f5f5f5;
   --popover: #2d2d44;
   --popover-foreground: #f5f5f5;
-  --primary: #ff8080;
+  --title-color: #c0211f;
+  --primary: #fb5005;
   --primary-foreground: #1a1a2e;
   --secondary: #f5c957;
   --secondary-foreground: #1a1a2e;
@@ -59,7 +61,7 @@
   --destructive-foreground: #1a1a2e;
   --border: #3d3d54;
   --input: #3d3d54;
-  --ring: #ff8080;
+  --ring: #fc9b03;
   --chart-1: #ff8080;
   --chart-2: #f5c957;
   --chart-3: #8b92a0;
@@ -125,6 +127,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-anton;
+    color: var(--title-color);
   }
 }
 
