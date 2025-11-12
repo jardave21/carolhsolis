@@ -32,7 +32,7 @@ export default function Hero() {
       setStatus("success")
       setMessage("¡Gracias! Te contactaremos pronto.")
       setEmail("")
-    } catch (err) {
+    } catch {
       setStatus("error")
       setMessage("No se pudo enviar. Intenta de nuevo.")
     } finally {
@@ -45,7 +45,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 bg-white overflow-hidden"
     >
-      {/* Fondo con textura */}
+      {/* Fondo con textura suave */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10">
@@ -58,9 +58,9 @@ export default function Hero() {
           <h1
             className="text-[3.5rem] md:text-[6rem] font-anton uppercase leading-none tracking-tight text-[#ffde59]"
             style={{
-              WebkitTextStroke: "0.6px black", // 🔹 Contorno más fino
+              WebkitTextStroke: "0.6px black",
               textShadow: `
-                0px 2px 3px rgba(0, 0, 0, 0.20), 
+                0px 2px 3px rgba(0, 0, 0, 0.20),
                 0px 1px 1px rgba(0, 0, 0, 0.15)
               `,
             }}
@@ -124,11 +124,14 @@ export default function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="relative w-64 h-96 md:w-[24rem] md:h-[34rem]">
+          <div className="relative w-64 h-96 md:w-[24rem] md:h-[34rem] rounded-3xl overflow-hidden shadow-[0_8px_35px_rgba(0,0,0,0.15)] backdrop-blur-sm">
             <img
               src="/images/marca_personal3.png"
               alt="Carol H. Solís"
-              className="w-full h-full object-cover object-top rounded-3xl border border-white shadow-2xl grayscale"
+              className="w-full h-full object-contain"
+              style={{
+                backgroundColor: "transparent",
+              }}
             />
           </div>
         </div>
