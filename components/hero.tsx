@@ -45,7 +45,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 bg-white overflow-hidden"
     >
-      {/* Fondo con textura o patrón suave */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10">
@@ -56,8 +55,12 @@ export default function Hero() {
           }`}
         >
           <h1
-            className="text-[3.5rem] md:text-[6rem] font-anton leading-none tracking-tight uppercase text-[#ffde59]
-                       [text-shadow:_-2px_-2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000,2px_2px_0_#000]"
+            className="text-[3.5rem] md:text-[6rem] font-anton uppercase leading-none tracking-tight text-[#ffde59]"
+            style={{
+              WebkitTextStroke: "1px black",
+              textShadow:
+                "1px 1px 2px rgba(0,0,0,0.4)", // sombra ligera para contraste suave
+            }}
           >
             CAROL H. SOLIS
           </h1>
