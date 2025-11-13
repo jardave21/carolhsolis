@@ -59,9 +59,10 @@ export default function Hero() {
           src="/images/marca_personal3.png"
           className="
             absolute
-            right-[26%]
-            top-[35%]
-            w-[200px] md:w-[260px] lg:w-[420px]
+            left-[55%] -translate-x-1/2 top-[10px] w-[120px]
+            sm:w-[180px]
+            md:w-[260px] md:right-[26%] md:left-auto md:translate-x-0 md:top-[30%]
+            lg:w-[420px]
             object-contain
           "
           style={{ zIndex: 5 }}
@@ -74,7 +75,7 @@ export default function Hero() {
             font-anton uppercase text-[#ffde59]
             text-center
             leading-none
-            text-[65px] sm:text-[120px] md:text-[160px] lg:text-[200px]
+            text-[44px] sm:text-[100px] md:text-[160px] lg:text-[200px]
           "
           style={{
             WebkitTextStroke: "0.35px rgba(0,0,0,0.20)",
@@ -86,8 +87,8 @@ export default function Hero() {
       </div>
 
       {/* SUBTÍTULO + FORMULARIO ABAJO */}
-    <div className="w-full max-w-7xl px-6 md:px-10 mt-20 md:mt-24 relative z-10">
-  <p className="tracking-[0.35em] font-semibold text-black text-lg md:text-xl mb-6">
+    <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
+  <p className="tracking-[0.2em] md:tracking-[0.35em] font-semibold text-black text-lg md:text-xl mb-6">
     PERIODISTA / ANALISTA POLITICA <br />
     ACTIVISTA / ESCRITORA 
   </p>
