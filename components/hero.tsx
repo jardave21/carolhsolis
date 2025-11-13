@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
-      <div className="relative w-full max-w-7xl mt-10 md:mt-16 px-4 md:px-10 flex justify-center">
+      <div className="relative w-full max-w-7xl px-4 md:px-10 flex justify-center">
 
         {/* Persona entre el texto */}
         <img
