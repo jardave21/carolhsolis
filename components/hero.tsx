@@ -51,18 +51,16 @@ export default function Hero() {
       {/* Fondo textura */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
-
-      {/* 🔥 Franja amarilla ajustada para cubrir desde abajo de la foto hasta el final del form */}
+      {/* 🔥 Franja amarilla ajustada para cubrir subtítulo + formulario */}
       <div
         className="
           absolute left-0 w-full
-          top-[270px]       /* donde comienza — súbelo/bájalo aquí */
-          h-[55%]           /* altura adaptable — más o menos según necesites */
+          top-[180px]   /* ahora empieza más arriba */
+          h-[65%]       /* aumenta la cobertura */
           bg-[#ffde59]/20
           z-[1]
         "
       />
-
 
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex justify-center">
@@ -96,7 +94,6 @@ export default function Hero() {
           CAROL H. SOLIS
         </h1>
       </div>
-
 
       {/* SUBTÍTULO + FORMULARIO */}
       <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
