@@ -86,53 +86,54 @@ export default function Hero() {
       </div>
 
       {/* SUBTÍTULO + FORMULARIO ABAJO */}
-      <div className="w-full max-w-7xl px-6 md:px-10 mt-20 md:mt-24">
-        <p className="tracking-[0.55em] font-semibold text-black text-sm mb-6">
-         PERIODISTA / ANALISTA POLITICA 
-         / ACTIVISTA / ESCRITORA 
-        </p>
+    <div className="w-full max-w-7xl px-6 md:px-10 mt-20 md:mt-24 relative z-10">
+  <p className="tracking-[0.35em] font-semibold text-black text-lg md:text-xl mb-6">
+    PERIODISTA / ANALISTA POLITICA <br />
+    ACTIVISTA / ESCRITORA 
+  </p>
 
-        <form onSubmit={onSubmit} className="max-w-sm">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Déjame tu correo y te escribo:
-          </label>
+  <form onSubmit={onSubmit} className="max-w-sm">
+    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+      Déjame tu correo y te escribo:
+    </label>
 
-          <div className="flex gap-2">
-            <input
-              id="email"
-              type="email"
-              placeholder="tu@correo.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 rounded-xl border border-[#ffde59] px-4 py-3 text-sm bg-white
-                         outline-none focus:ring-2 focus:ring-[#ffde59]/60"
-              required
-            />
-            <button
-              type="submit"
-              disabled={status === "loading" || !isValidEmail}
-              className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black
-                         hover:bg-[#ffd633] disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {status === "loading" ? "Enviando…" : "Enviar"}
-            </button>
-          </div>
+    <div className="flex gap-2">
+      <input
+        id="email"
+        type="email"
+        placeholder="tu@correo.com"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="flex-1 rounded-xl border border-[#ffde59] px-4 py-3 text-sm bg-white
+                   outline-none focus:ring-2 focus:ring-[#ffde59]/60"
+        required
+      />
+      <button
+        type="submit"
+        disabled={status === "loading" || !isValidEmail}
+        className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black
+                   hover:bg-[#ffd633] disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {status === "loading" ? "Enviando…" : "Enviar"}
+      </button>
+    </div>
 
-          {status !== "idle" && message && (
-            <p
-              className={`mt-3 text-sm ${
-                status === "success"
-                  ? "text-green-600"
-                  : status === "error"
-                  ? "text-red-600"
-                  : "text-gray-600"
-              }`}
-            >
-              {message}
-            </p>
-          )}
-        </form>
-      </div>
+    {status !== "idle" && message && (
+      <p
+        className={`mt-3 text-sm ${
+          status === "success"
+            ? "text-green-600"
+            : status === "error"
+            ? "text-red-600"
+            : "text-gray-600"
+        }`}
+      >
+        {message}
+      </p>
+    )}
+  </form>
+</div>
+
     </section>
   )
 }
