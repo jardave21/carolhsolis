@@ -51,9 +51,17 @@ export default function Hero() {
       {/* Fondo textura */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
-      {/* CONTENEDOR DEL TÍTULO + PERSONA */}
-      <div className="relative w-full max-w-7xl px-4 md:px-10 flex justify-center">
+      {/* Franja de color desde abajo */}
+      <div
+        className="
+          absolute inset-x-0 bottom-0 h-[45%]
+          bg-[#ffde59]/20
+          z-[1]
+        "
+      />
 
+      {/* CONTENEDOR DEL TÍTULO + PERSONA */}
+      <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex justify-center">
         {/* Persona entre el texto */}
         <img
           src="/images/marca_personal3.png"
@@ -87,63 +95,65 @@ export default function Hero() {
       </div>
 
       {/* SUBTÍTULO + FORMULARIO ABAJO */}
-    <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
-<p
-  className="
-    font-semibold text-black
-    text-[15px] leading-tight
-    tracking-[0.12em]
-    sm:text-lg sm:leading-snug sm:tracking-[0.25em]
-    md:text-xl md:tracking-[0.35em]
-    mb-6
-  "
->
-  PERIODISTA / ANALISTA POLITICA <br />
-  ACTIVISTA / ESCRITORA
-</p>
+      <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
+        <p
+          className="
+            font-semibold text-black
+            text-[15px] leading-tight
+            tracking-[0.12em]
+            sm:text-lg sm:leading-snug sm:tracking-[0.25em]
+            md:text-xl md:tracking-[0.35em]
+            mb-6
+          "
+        >
+          PERIODISTA / ANALISTA POLITICA <br />
+          ACTIVISTA / ESCRITORA
+        </p>
 
-  <form onSubmit={onSubmit} className="max-w-sm">
-    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-      Déjame tu correo y te escribo:
-    </label>
+        <form onSubmit={onSubmit} className="max-w-sm">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Déjame tu correo y te escribo:
+          </label>
 
-    <div className="flex gap-2">
-      <input
-        id="email"
-        type="email"
-        placeholder="tu@correo.com"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 rounded-xl border border-[#ffde59] px-4 py-3 text-sm bg-white
-                   outline-none focus:ring-2 focus:ring-[#ffde59]/60"
-        required
-      />
-      <button
-        type="submit"
-        disabled={status === "loading" || !isValidEmail}
-        className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black
-                   hover:bg-[#ffd633] disabled:opacity-60 disabled:cursor-not-allowed"
-      >
-        {status === "loading" ? "Enviando…" : "Enviar"}
-      </button>
-    </div>
+          <div className="flex gap-2">
+            <input
+              id="email"
+              type="email"
+              placeholder="tu@correo.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 rounded-xl border border-[#ffde59] px-4 py-3 text-sm bg-white
+                         outline-none focus:ring-2 focus:ring-[#ffde59]/60"
+              required
+            />
+            <button
+              type="submit"
+              disabled={status === "loading" || !isValidEmail}
+              className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black
+                         hover:bg-[#ffd633] disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {status === "loading" ? "Enviando…" : "Enviar"}
+            </button>
+          </div>
 
-    {status !== "idle" && message && (
-      <p
-        className={`mt-3 text-sm ${
-          status === "success"
-            ? "text-green-600"
-            : status === "error"
-            ? "text-red-600"
-            : "text-gray-600"
-        }`}
-      >
-        {message}
-      </p>
-    )}
-  </form>
-</div>
-
+          {status !== "idle" && message && (
+            <p
+              className={`mt-3 text-sm ${
+                status === "success"
+                  ? "text-green-600"
+                  : status === "error"
+                  ? "text-red-600"
+                  : "text-gray-600"
+              }`}
+            >
+              {message}
+            </p>
+          )}
+        </form>
+      </div>
     </section>
   )
 }
