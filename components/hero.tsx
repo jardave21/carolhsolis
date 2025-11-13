@@ -10,7 +10,10 @@ export default function Hero() {
 
   useEffect(() => setIsVisible(true), [])
 
-  const isValidEmail = useMemo(() => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()), [email])
+  const isValidEmail = useMemo(
+    () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()),
+    [email]
+  )
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -43,98 +46,91 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 bg-white overflow-hidden"
+      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center"
     >
-      {/* Fondo con textura suave */}
+      {/* Fondo textura */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Texto principal */}
-        <div
-          className={`text-center md:text-left transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+      {/* CONTENEDOR DEL TÍTULO + PERSONA */}
+      <div className="relative w-full max-w-7xl mt-10 md:mt-16 px-4 md:px-10 flex justify-center">
+
+        {/* Persona entre el texto */}
+        <img
+          src="/images/marca_personal3.png"
+          className="
+            absolute
+            right-[25%]
+            top-[5%]
+            w-[200px] md:w-[260px] lg:w-[320px]
+            object-contain
+          "
+          style={{ zIndex: 5 }}
+          alt="Carol H. Solís"
+        />
+
+        {/* TÍTULO: UNA SOLA LÍNEA */}
+        <h1
+          className="
+            font-anton uppercase text-[#ffde59]
+            text-center
+            leading-none
+            text-[65px] sm:text-[120px] md:text-[160px] lg:text-[200px]
+          "
+          style={{
+            WebkitTextStroke: "0.35px rgba(0,0,0,0.20)",
+            textShadow: "0px 4px 6px rgba(0,0,0,0.25)",
+          }}
         >
-          <h1
-            className="text-[3.5rem] md:text-[6rem] font-anton uppercase leading-none tracking-tight text-[#ffde59]"
-            style={{
-              WebkitTextStroke: "0.6px black",
-              textShadow: `
-                0px 2px 3px rgba(0, 0, 0, 0.20),
-                0px 1px 1px rgba(0, 0, 0, 0.15)
-              `,
-            }}
-          >
-            CAROL H. SOLIS
-          </h1>
+          CAROL H. SOLIS
+        </h1>
+      </div>
 
-          <p className="mt-3 text-lg md:text-xl tracking-[0.3em] font-open-sans text-black">
-            PERIODISTA
-          </p>
+      {/* SUBTÍTULO + FORMULARIO ABAJO */}
+      <div className="w-full max-w-7xl px-6 md:px-10 mt-20 md:mt-24">
+        <p className="tracking-[0.55em] font-semibold text-black text-sm mb-6">
+          P E R I O D I S T A
+        </p>
 
-          {/* Formulario correo */}
-          <form onSubmit={onSubmit} className="mt-8 max-w-md mx-auto md:mx-0">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-2 font-open-sans"
-            >
-              Déjame tu correo y te escribo:
-            </label>
-            <div className="flex gap-2">
-              <input
-                id="email"
-                type="email"
-                inputMode="email"
-                autoComplete="email"
-                placeholder="tu@correo.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 rounded-xl border border-[#ffde59] bg-white px-4 py-3 text-sm outline-none font-open-sans
-                           focus:ring-2 focus:ring-[#ffde59]/60 focus:border-[#ffde59]/60"
-                required
-              />
-              <button
-                type="submit"
-                disabled={status === "loading" || !isValidEmail}
-                className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black font-open-sans hover:bg-[#ffd633]
-                           transition disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {status === "loading" ? "Enviando…" : "Enviar"}
-              </button>
-            </div>
-            {status !== "idle" && message && (
-              <p
-                className={`mt-3 text-sm ${
-                  status === "success"
-                    ? "text-green-600"
-                    : status === "error"
-                    ? "text-red-600"
-                    : "text-gray-600"
-                }`}
-              >
-                {message}
-              </p>
-            )}
-          </form>
-        </div>
+        <form onSubmit={onSubmit} className="max-w-sm">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            Déjame tu correo y te escribo:
+          </label>
 
-        {/* Imagen principal */}
-        <div
-          className={`relative transition-all duration-700 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="relative w-64 h-96 md:w-[24rem] md:h-[34rem] rounded-3xl overflow-hidden shadow-[0_8px_35px_rgba(0,0,0,0.15)] backdrop-blur-sm">
-            <img
-              src="/images/marca_personal3.png"
-              alt="Carol H. Solís"
-              className="w-full h-full object-contain"
-              style={{
-                backgroundColor: "transparent",
-              }}
+          <div className="flex gap-2">
+            <input
+              id="email"
+              type="email"
+              placeholder="tu@correo.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 rounded-xl border border-[#ffde59] px-4 py-3 text-sm bg-white
+                         outline-none focus:ring-2 focus:ring-[#ffde59]/60"
+              required
             />
+            <button
+              type="submit"
+              disabled={status === "loading" || !isValidEmail}
+              className="rounded-xl px-5 py-3 text-sm font-semibold bg-[#ffde59] text-black
+                         hover:bg-[#ffd633] disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {status === "loading" ? "Enviando…" : "Enviar"}
+            </button>
           </div>
-        </div>
+
+          {status !== "idle" && message && (
+            <p
+              className={`mt-3 text-sm ${
+                status === "success"
+                  ? "text-green-600"
+                  : status === "error"
+                  ? "text-red-600"
+                  : "text-gray-600"
+              }`}
+            >
+              {message}
+            </p>
+          )}
+        </form>
       </div>
     </section>
   )
