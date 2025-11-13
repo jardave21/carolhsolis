@@ -59,9 +59,9 @@ export default function Hero() {
           src="/images/marca_personal3.png"
           className="
             absolute
-            right-[25%]
-            top-[5%]
-            w-[200px] md:w-[260px] lg:w-[320px]
+            right-[26%]
+            top-[35%]
+            w-[200px] md:w-[260px] lg:w-[420px]
             object-contain
           "
           style={{ zIndex: 5 }}
@@ -88,7 +88,8 @@ export default function Hero() {
       {/* SUBTÍTULO + FORMULARIO ABAJO */}
       <div className="w-full max-w-7xl px-6 md:px-10 mt-20 md:mt-24">
         <p className="tracking-[0.55em] font-semibold text-black text-sm mb-6">
-          P E R I O D I S T A
+         PERIODISTA / ANALISTA POLITICA 
+         / ACTIVISTA / ESCRITORA 
         </p>
 
         <form onSubmit={onSubmit} className="max-w-sm">
