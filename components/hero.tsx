@@ -88,10 +88,19 @@ export default function Hero() {
 
       {/* SUBTÍTULO + FORMULARIO ABAJO */}
     <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
-  <p className="tracking-[0.2em] md:tracking-[0.35em] font-semibold text-black text-lg md:text-xl mb-6">
-    PERIODISTA / ANALISTA POLITICA <br />
-    ACTIVISTA / ESCRITORA 
-  </p>
+<p
+  className="
+    font-semibold text-black
+    text-[15px] leading-tight
+    tracking-[0.12em]
+    sm:text-lg sm:leading-snug sm:tracking-[0.25em]
+    md:text-xl md:tracking-[0.35em]
+    mb-6
+  "
+>
+  PERIODISTA / ANALISTA POLITICA <br />
+  ACTIVISTA / ESCRITORA
+</p>
 
   <form onSubmit={onSubmit} className="max-w-sm">
     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
