@@ -7,7 +7,6 @@ export default function About() {
 
         {/* ¿Quién Soy? */}
         <div className="grid md:grid-cols-2 gap-10 items-center font-open-sans">
-
           {/* Texto */}
           <div>
             <h2
@@ -19,7 +18,9 @@ export default function About() {
               "
             >
               ¿QUIÉN
+              {/* En desktop: salto de línea. En móvil: espacio */}
               <span className="hidden lg:inline"><br /></span>
+              <span className="inline lg:hidden">&nbsp;</span>
               SOY?
             </h2>
 
@@ -85,6 +86,7 @@ export default function About() {
             >
               ¿QUÉ
               <span className="hidden lg:inline"><br /></span>
+              <span className="inline lg:hidden">&nbsp;</span>
               HAGO?
             </h2>
 
@@ -115,6 +117,7 @@ export default function About() {
             >
               MIS
               <span className="hidden lg:inline"><br /></span>
+              <span className="inline lg:hidden">&nbsp;</span>
               TEMAS
             </h2>
 
