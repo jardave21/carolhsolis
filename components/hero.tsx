@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react"
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [status, setStatus] = useState("idle")
   const [message, setMessage] = useState("")
 
   useEffect(() => setIsVisible(true), [])
@@ -15,13 +15,14 @@ export default function Hero() {
     [email]
   )
 
-  async function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e) {
     e.preventDefault()
     if (!isValidEmail) {
       setStatus("error")
       setMessage("Ingresa un correo válido.")
       return
     }
+
     try {
       setStatus("loading")
       setMessage("")
@@ -51,12 +52,12 @@ export default function Hero() {
       {/* Fondo textura */}
       <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
-      {/* 🔥 Franja amarilla ajustada para cubrir subtítulo + formulario */}
+      {/* Franja amarilla */}
       <div
         className="
           absolute left-0 w-full
-          top-[180px]   /* ahora empieza más arriba */
-          h-[65%]       /* aumenta la cobertura */
+          top-[180px]
+          h-[65%]
           bg-[#ffde59]/20
           z-[1]
         "
@@ -64,7 +65,8 @@ export default function Hero() {
 
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex justify-center">
-        {/* Persona entre el texto */}
+        
+        {/* Persona */}
         <img
           src="/images/marca_personal3.png"
           className="
@@ -79,7 +81,7 @@ export default function Hero() {
           alt="Carol H. Solís"
         />
 
-        {/* TÍTULO */}
+        {/* TÍTULO AJUSTADO */}
         <h1
           className="
             font-anton uppercase text-[#ffde59]
@@ -87,8 +89,8 @@ export default function Hero() {
             text-[44px] sm:text-[100px] md:text-[160px] lg:text-[200px]
           "
           style={{
-            WebkitTextStroke: "0.35px rgba(0,0,0,0.20)",
-            textShadow: "0px 4px 6px rgba(0,0,0,0.25)",
+            WebkitTextStroke: "0.35px rgba(0,0,0,0.30)",
+            textShadow: "0px 1.8px 2px rgba(62,62,47,0.45)",
           }}
         >
           CAROL H. SOLIS
@@ -130,6 +132,7 @@ export default function Hero() {
                          outline-none focus:ring-2 focus:ring-[#ffde59]/60"
               required
             />
+
             <button
               type="submit"
               disabled={status === "loading" || !isValidEmail}
