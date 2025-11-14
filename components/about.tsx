@@ -184,7 +184,7 @@ export default function About() {
         <div className="pt-8 text-center font-open-sans">
           <blockquote className="text-xl italic relative">
             <p>
-              “Busco abrir el diálogo sobre los temas que generalmente no nos gusta hablar…”
+              “Busco abrir el diálogo sobre los temas que generalmente no nos gusta hablar y aterrizarlos sin tanto rollo. Ponerlos sobre la mesa sin filtros y sin sutilezas, accesibles y desde una perspectiva simple que ayude a cuestionarnos.”
             </p>
             <footer className="mt-4 not-italic font-medium text-muted">
               — Carol H. Solís
