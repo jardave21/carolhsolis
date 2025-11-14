@@ -66,7 +66,7 @@ export default function Footer() {
               <ul className="grid grid-cols-1 gap-2 text-white/80 font-open-sans">
                 <li><a href="#home" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Inicio</a></li>
                 <li><a href="#about" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Sobre mí</a></li>
-                <li><a href="#topics" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Mis temas</a></li>
+                <li><a href="##mis-temas" className="hover:text-white hover:underline underline-offset-4 transition-colors font-open-sans">Mis temas</a></li>
               </ul>
             </nav>
 

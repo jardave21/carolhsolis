@@ -18,18 +18,18 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Carolina 'Carol H.' Solís | Periodista y Speakerq",
+  title: "Carolina 'Carol H.' Solís | Periodista y Speaker",
   description:
     "Carolina 'Carol H.' Solís es una destacada periodista y conferencista mexicana con más de 25 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.",
   generator: "v0.app",
   openGraph: {
-    title: "Carolina 'Carol H.' Solís | Periodista y Speakerq",
+    title: "Carolina 'Carol H.' Solís | Periodista y Speaker",
     description:
       "Con más de 25 años de experiencia, Carolina 'Carol H.' Solís es una voz influyente en el periodismo mexicano, enfocada en política, derechos humanos y feminismo.",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Carolina 'Carol H.' Solís",
