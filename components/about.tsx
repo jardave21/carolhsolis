@@ -122,58 +122,63 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mis Temas */}
-        <div id="mis-temas" className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40">
+ 
+{/* Mis Temas */}
+<div
+  id="mis-temas"
+  className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40 mt-[5px] md:mt-[150px]"
+>
 
-          {/* Texto */}
-          <div className="font-open-sans">
-            <h2
-              className="
-                font-anton text-[#ff9d33] mb-6
-                text-[36px] sm:text-[60px] md:text-[80px] lg:text-[140px] xl:text-[180px]
-                whitespace-nowrap lg:whitespace-normal
-                leading-none lg:leading-[0.95]
-              "
-            >
-              MIS
-              <span className="hidden lg:inline"><br /></span>
-              <span className="inline lg:hidden">&nbsp;</span>
-              TEMAS
-            </h2>
+  {/* Texto */}
+  <div className="font-open-sans">
+    <h2
+      className="
+        font-anton text-[#ff9d33] mb-6
+        text-[36px] sm:text-[60px] md:text-[80px] lg:text-[140px] xl:text-[180px]
+        whitespace-nowrap lg:whitespace-normal
+        leading-none lg:leading-[0.95]
+      "
+    >
+      MIS
+      <span className="hidden lg:inline"><br /></span>
+      <span className="inline lg:hidden">&nbsp;</span>
+      TEMAS
+    </h2>
 
-            <ul className="list-disc list-inside space-y-2 text-[#333] max-w-[520px] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed">
-              <li>Análisis político</li>
-              <li>Racismo, clasismo y desigualdad</li>
-              <li>Cultura animal</li>
-              <li>Diversidad</li>
-              <li>Feminismos y otras luchas</li>
-            </ul>
-          </div>
+    <ul className="list-disc list-inside space-y-2 text-[#333] max-w-[520px] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed">
+      <li>Análisis político</li>
+      <li>Racismo, clasismo y desigualdad</li>
+      <li>Cultura animal</li>
+      <li>Diversidad</li>
+      <li>Feminismos y otras luchas</li>
+    </ul>
+  </div>
 
-          {/* Imágenes */}
-          <div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
-                <div className="aspect-video">
-                  <img
-                    src="/images/podcast1.jpg"
-                    alt="Podcast 1"
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
-              </div>
-              <div className="rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
-                <div className="aspect-video">
-                  <img
-                    src="/images/podcast2.jpg"
-                    alt="Podcast 2"
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Imágenes */}
+  <div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
+        <div className="aspect-video">
+          <img
+            src="/images/podcast1.jpg"
+            alt="Podcast 1"
+            className="h-full w-full object-cover object-center"
+          />
         </div>
+      </div>
+      <div className="rounded-2xl shadow-md overflow-hidden bg-white border border-border/40">
+        <div className="aspect-video">
+          <img
+            src="/images/podcast2.jpg"
+            alt="Podcast 2"
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
         {/* Cita final */}
         <div className="pt-8 text-center font-open-sans">
