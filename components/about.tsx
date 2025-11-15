@@ -12,7 +12,7 @@ export default function About() {
           <div className="font-open-sans">
             <h2
               className="
-                font-anton text-[#ff9d33] mb-6
+                font-anton text-[#F23827] mb-6
                 text-[36px] sm:text-[60px] md:text-[80px] lg:text-[140px] xl:text-[180px]
                 whitespace-nowrap lg:whitespace-normal
                 leading-none lg:leading-[0.95]
@@ -98,7 +98,7 @@ export default function About() {
           <div className="font-open-sans">
             <h2
               className="
-                font-anton text-[#ff9d33] mb-6
+                font-anton text-[#F23827] mb-6
                 text-[36px] sm:text-[60px] md:text-[80px] lg:text-[140px] xl:text-[180px]
                 whitespace-nowrap lg:whitespace-normal
                 leading-none lg:leading-[0.95]
@@ -133,7 +133,7 @@ export default function About() {
   <div className="font-open-sans">
     <h2
       className="
-        font-anton text-[#ff9d33] mb-6
+        font-anton text-[#F23827] mb-6
         text-[36px] sm:text-[60px] md:text-[80px] lg:text-[140px] xl:text-[180px]
         whitespace-nowrap lg:whitespace-normal
         leading-none lg:leading-[0.95]
