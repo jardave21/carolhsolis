@@ -65,7 +65,7 @@ export default function Hero() {
 
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex justify-center">
-        
+
         {/* Persona */}
         <img
           src="/images/marca_personal3.png"
@@ -77,7 +77,10 @@ export default function Hero() {
             lg:w-[420px]
             object-contain
           "
-          style={{ zIndex: 5 }}
+          style={{
+            zIndex: 5,
+            filter: 'drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.45))'
+          }}
           alt="Carol H. Solís"
         />
 
@@ -145,13 +148,12 @@ export default function Hero() {
 
           {status !== "idle" && message && (
             <p
-              className={`mt-3 text-sm ${
-                status === "success"
+              className={`mt-3 text-sm ${status === "success"
                   ? "text-green-600"
                   : status === "error"
-                  ? "text-red-600"
-                  : "text-gray-600"
-              }`}
+                    ? "text-red-600"
+                    : "text-gray-600"
+                }`}
             >
               {message}
             </p>
