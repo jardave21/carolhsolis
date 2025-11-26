@@ -79,7 +79,7 @@ export default function Hero() {
           "
           style={{
             zIndex: 5,
-            filter: 'drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.45))'
+            filter: 'drop-shadow(0px 25px 50px rgba(0, 0, 0, 0.65)) drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4))'
           }}
           alt="Carol H. Solís"
         />
@@ -149,10 +149,10 @@ export default function Hero() {
           {status !== "idle" && message && (
             <p
               className={`mt-3 text-sm ${status === "success"
-                  ? "text-green-600"
-                  : status === "error"
-                    ? "text-red-600"
-                    : "text-gray-600"
+                ? "text-green-600"
+                : status === "error"
+                  ? "text-red-600"
+                  : "text-gray-600"
                 }`}
             >
               {message}
