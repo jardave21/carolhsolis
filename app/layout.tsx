@@ -1,9 +1,14 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Anton, Open_Sans } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
 
 const anton = Anton({
   subsets: ["latin"],
@@ -18,27 +23,55 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Carolina 'Carol H.' Solís | Periodista y Speaker",
+  metadataBase: new URL("https://www.carolhsolis.com.mx"),
+  title: {
+    default: "Carol H Solis | Conferencista y Analista Política en México",
+    template: "%s | Carol H Solis",
+  },
   description:
-    "Carolina 'Carol H.' Solís es una destacada periodista y conferencista mexicana con más de 25 años de experiencia, reconocida por su enfoque en temas de política, derechos humanos, feminismo y responsabilidad social.",
-  generator: "v0.app",
+    "Conferencista, analista política y activista. Conferencias y talleres para empresas, emprendedores y líderes políticos en México. Contrata a Carol H Solis.",
+  keywords: [
+    "Carol H Solis",
+    "conferencista México",
+    "analista política México",
+    "talleres liderazgo",
+    "conferencias empresas",
+    "activista México",
+    "speaker política",
+    "editorialista independiente",
+  ],
+  authors: [{ name: "Carol H Solis" }],
+  creator: "Carol H Solis",
+  publisher: "Carol H Solis",
   openGraph: {
-    title: "Carolina 'Carol H.' Solís | Periodista y Speaker",
+    title: "Carol H Solis | Conferencista y Analista Política en México",
     description:
-      "Con más de 25 años de experiencia, Carolina 'Carol H.' Solís es una voz influyente en el periodismo mexicano, enfocada en política, derechos humanos y feminismo.",
+      "Conferencista, analista política y activista. Conferencias y talleres para empresas, emprendedores y líderes políticos en México.",
+    url: "https://www.carolhsolis.com.mx",
+    siteName: "Carol H Solis",
+    locale: "es_MX",
     type: "website",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Carolina 'Carol H.' Solís",
+        alt: "Carol H Solis - Conferencista y Analista Política",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Carol H Solis | Conferencista y Analista Política en México",
+    description: "Conferencista, analista política y activista en México.",
+    images: ["/logo.png"],
   },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
+  },
+  alternates: {
+    canonical: "https://www.carolhsolis.com.mx",
   },
 }
 
