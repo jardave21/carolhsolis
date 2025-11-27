@@ -79,7 +79,7 @@ export default function Hero() {
           "
           style={{
             zIndex: 5,
-            filter: 'drop-shadow(0px 25px 50px rgba(0, 0, 0, 0.65)) drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4))'
+            filter: 'drop-shadow(12px 12px 8px rgba(107, 127, 215, 0.5)) drop-shadow(6px 6px 5px rgba(139, 127, 181, 0.4)) drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.15))'
           }}
           alt="Carol H. Solís"
         />
