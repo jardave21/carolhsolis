@@ -47,79 +47,19 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center"
+      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center justify-end"
+      style={{
+        backgroundImage: "url('/captura.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center -100px",
+      }}
     >
-      {/* Fondo textura */}
-      <div className="absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
-
-      {/* Franja amarilla */}
-      <div
-        className="
-          absolute left-0 w-full
-          top-[180px]
-          h-[65%]
-          bg-[#ffde59]/20
-          z-[1]
-        "
-      />
-
-      {/* CONTENEDOR DEL TÍTULO + PERSONA */}
-      <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex justify-center">
-
-        {/* Persona */}
-        <img
-          src="/images/marca_personal3.png"
-          className="
-            absolute
-            left-[55%] -translate-x-1/2 top-[10px] w-[120px]
-            sm:w-[180px]
-            md:w-[260px] md:right-[26%] md:left-auto md:translate-x-0 md:top-[30%]
-            lg:w-[420px]
-            object-contain
-          "
-          style={{
-            zIndex: 5,
-            filter: 'drop-shadow(12px 12px 8px rgba(107, 127, 215, 0.5)) drop-shadow(6px 6px 5px rgba(139, 127, 181, 0.4)) drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.15))'
-          }}
-          alt="Carol H. Solís"
-        />
-
-        {/* TÍTULO AJUSTADO */}
-        <h1
-          className="
-            font-anton uppercase text-[#ffde59]
-            text-center leading-none
-            text-[44px] sm:text-[100px] md:text-[160px] lg:text-[200px]
-          "
-          style={{
-            WebkitTextStroke: "0.35px rgba(0,0,0,0.30)",
-            textShadow: "0px 1.8px 2px rgba(62,62,47,0.45)",
-          }}
-        >
-          CAROL H. SOLIS
-        </h1>
-      </div>
-
       {/* SUBTÍTULO + FORMULARIO */}
-      <div className="w-full max-w-7xl px-6 md:px-10 mt-48 sm:mt-32 md:mt-24 relative z-10">
-        <p
-          className="
-            font-semibold text-black
-            text-[15px] leading-tight
-            tracking-[0.12em]
-            sm:text-lg sm:leading-snug sm:tracking-[0.25em]
-            md:text-xl md:tracking-[0.35em]
-            mb-6
-          "
-        >
-          PERIODISTA / ANALISTA POLITICA <br />
-          ACTIVISTA / ESCRITORA
-        </p>
-
-        <form onSubmit={onSubmit} className="max-w-sm">
+      <div className="w-full max-w-xl px-6 md:px-10 pb-20 relative z-10">
+        <form onSubmit={onSubmit} className="max-w-sm mx-auto">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-medium text-gray-100 mb-2 text-center"
           >
             Déjame tu correo y te escribo:
           </label>
@@ -148,11 +88,11 @@ export default function Hero() {
 
           {status !== "idle" && message && (
             <p
-              className={`mt-3 text-sm ${status === "success"
-                ? "text-green-600"
+              className={`mt-3 text-sm text-center ${status === "success"
+                ? "text-green-400"
                 : status === "error"
-                  ? "text-red-600"
-                  : "text-gray-600"
+                  ? "text-red-400"
+                  : "text-gray-200"
                 }`}
             >
               {message}
