@@ -160,6 +160,9 @@ export default function Hero() {
           )}
         </form>
       </div>
+
+      {/* Separator */}
+      <div className="w-full max-w-5xl h-4 bg-[#F23827] rounded-full absolute bottom-10 left-1/2 -translate-x-1/2 z-20"></div>
     </section>
   )
 }

@@ -3,7 +3,7 @@
 export default function About() {
   return (
     <section id="about" className="py-5 px-4 md:px-6 bg-white scroll-mt-40">
-      <div className="max-w-5xl mx-auto space-y-24">
+      <div className="max-w-5xl mx-auto">
 
         {/* ... (Secciones anteriores: ¿Quién soy?, ¿Qué hago? se mantienen igual) ... */}
 
@@ -34,6 +34,10 @@ export default function About() {
             </div>
           </div>
         </div>
+
+
+        {/* Separator */}
+        <div className="w-full h-4 bg-[#F23827] rounded-full mx-auto mt-12 mb-24"></div>
 
         {/* ¿Qué Hago? */}
         <div id="que-hago" className="grid md:grid-cols-2 gap-10 items-center scroll-mt-40">
@@ -74,6 +78,9 @@ export default function About() {
             </ul>
           </div>
         </div>
+
+        {/* Separator */}
+        <div className="w-full h-4 bg-[#F23827] rounded-full mx-auto mt-12 mb-24"></div>
 
         {/* MIS TEMAS */}
         <div id="mis-temas" className="grid md:grid-cols-2 gap-10 items-start scroll-mt-40 mt-[5px] md:mt-[150px]">
@@ -167,6 +174,6 @@ export default function About() {
         </div>
 
       </div>
-    </section>
+    </section >
   )
 }

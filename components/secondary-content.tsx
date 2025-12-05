@@ -8,9 +8,13 @@ export default function SecondaryContent() {
   ]
 
   return (
-    <section id="libros" className="py-20 px-4 md:px-6 bg-background scroll-mt-28">
+    <section id="libros" className="pt-10 pb-20 px-4 md:px-6 bg-background scroll-mt-28">
       <div className="max-w-5xl mx-auto">
-        {/* Books Section */} 
+
+        {/* Separator */}
+        <div className="w-full h-4 bg-[#F23827] rounded-full mx-auto mb-16"></div>
+
+        {/* Books Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl  font-anton mb-4">Mis Libros</h2>
           <p className="text-lg text-muted max-w-2xl mx-auto font-open-sans">
