@@ -57,7 +57,7 @@ export default function Hero() {
         className="
           absolute left-0 w-full
           top-[120px] md:top-[180px]
-          h-[55%] md:h-[65%]
+          h-[55%] md:h-auto md:bottom-30
           bg-[#ffde59]/20
           z-[1]
         "
@@ -66,7 +66,7 @@ export default function Hero() {
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex flex-col md:block md:justify-center">
 
-        {/* Persona */}
+        {/* Persona (sin mover) */}
         <img
           src="/images/marca_personal3.png"
           className="
@@ -80,36 +80,24 @@ export default function Hero() {
             lg:w-[420px]
           "
           style={{
-            zIndex: 5,
-            filter: 'drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.4))' // Base shadow
+            zIndex: 15,
+            filter: "drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.4))",
           }}
-          // Specific desktop complex shadow via style override for md only is hard in inline-style. 
-          // We will use the comprehensive shadow for both, or simple for mobile?
-          // User liked the complex shadow on desktop. Let's apply complex shadow always?
-          // Or stick to the one requested "algo asi" for mobile previously?
-          // I'll use the complex one generally as it looks better.
           alt="Carol H. Solís"
         />
 
         {/* TÍTULO */}
         <h1
           className="
-            /* MOBILE: Anton Font, Flex Order 2 */
+            /* MOBILE */
             order-2 mt-4 text-[12vw] leading-none font-anton font-normal text-[#ffde59] uppercase text-center tracking-tight select-none
-
-            /* DESKTOP: Absolute/Static positioning context */
+            /* DESKTOP */
             md:order-none md:mt-0 
             md:text-[160px] lg:text-[200px]
             md:text-center md:w-full
           "
           style={{
-            // Apply text stroke/shadow conditionally? CSS variables or media queries needed for style prop.
-            // We can leave the style prop as is, it will apply to mobile too but might look okay.
-            // User said "mobile was fine before" - before had NO stroke, just drop shadow.
-            // I'll apply the elaborate styles.
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Default/Mobile shadow
-            // Desktop specific stroke is hard to media-query in inline styles. 
-            // I will rely on classes for font, and keep shadow simple for mobile.
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
           }}
         >
           CAROL H. SOLIS
@@ -129,12 +117,11 @@ export default function Hero() {
         <div className="pointer-events-auto w-full md:w-auto">
           <p
             className="
-            font-semibold text-black uppercase text-center
-            text-xs tracking-[0.2em] mb-6
-            
-            sm:text-lg sm:leading-snug sm:tracking-[0.25em]
-            md:text-xl md:tracking-[0.35em] md:text-left md:mb-6
-          "
+              font-semibold text-black uppercase text-center
+              text-xs tracking-[0.2em] mb-6
+              sm:text-lg sm:leading-snug sm:tracking-[0.25em]
+              md:text-xl md:tracking-[0.35em] md:text-left md:mb-6
+            "
           >
             <span className="block md:hidden">
               PERIODISTA / ANALISTA POLITICA<br />
@@ -193,8 +180,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Separator */}
-      <div className="w-full max-w-5xl h-4 bg-[#F23827] rounded-full absolute bottom-10 left-1/2 -translate-x-1/2 z-20 md:z-0"></div>
+      {/* Línea roja abajo del hero */}
+      <div
+        className="
+          w-full max-w-5xl
+          h-4 bg-[#F23827] rounded-full
+          absolute bottom-10 md:bottom-32
+          left-1/2 -translate-x-1/2
+          z-20
+        "
+      />
     </section>
   )
 }
