@@ -84,7 +84,7 @@ export default function RootLayout({
     <html lang="es" className={`${anton.variable} ${openSans.variable}`}>
       <body className={`font-sans antialiased flex flex-col min-h-screen`}>
         <Header />
-        <main className="flex-1 pt-[96px]">
+        <main className="flex-1 pt-[0px]">
           {children}
         </main>
         <Footer />

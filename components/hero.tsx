@@ -47,13 +47,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center justify-end"
+      className="relative min-h-[90vh] bg-white flex flex-col items-center justify-end"
       style={{
         backgroundImage: "url('/captura.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center -100px",
+        backgroundSize: "contain",
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat",
       }}
     >
+
       {/* SUBTÍTULO + FORMULARIO */}
       <div className="w-full max-w-xl px-6 md:px-10 pb-20 relative z-10">
         <form onSubmit={onSubmit} className="max-w-sm mx-auto">
