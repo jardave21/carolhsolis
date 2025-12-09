@@ -119,7 +119,7 @@ export default function Hero() {
       {/* SUBTÍTULO + FORMULARIO */}
       <div
         className="
-          w-full max-w-7xl px-6 md:px-10 
+          w-full max-w-5xl px-4 md:px-6 
           mt-8 md:mt-0 
           relative 
           md:absolute md:top-[55%] md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 
@@ -141,7 +141,8 @@ export default function Hero() {
               ACTIVISTA / ESCRITORA
             </span>
             <span className="hidden md:block">
-              PERIODISTA / ANALISTA POLITICA <br />
+              PERIODISTA / <br />
+              ANALISTA POLITICA / <br />
               ACTIVISTA / ESCRITORA
             </span>
           </p>
