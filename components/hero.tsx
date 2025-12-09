@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center pt-5 pb-16 md:pt-0 md:pb-0"
+      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center pt-10 md:pt-0"
     >
       {/* Fondo textura (Desktop only) */}
 
