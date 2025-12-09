@@ -55,6 +55,7 @@ export default function Hero() {
       {/* Franja amarilla */}
       <div
         className="
+          hidden md:block
           absolute left-0 w-full
           top-[120px] md:top-[180px]
           h-[55%] md:h-auto md:bottom-30
@@ -67,11 +68,13 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex flex-col md:block md:justify-center">
 
         {/* Persona (sin mover) */}
-        <img
-          src="/images/marca_personal3.png"
-          className="
+        <div className="relative w-full order-2 md:static md:order-none">
+          <div className="absolute inset-0 bg-[#ffde59]/20 -z-10 md:hidden" />
+          <img
+            src="/images/marca_personal3.png"
+            className="
             /* MOBILE: Relative block, first in order */
-            relative block w-full h-[45vh] object-contain object-bottom mx-auto order-1
+            relative block w-full h-[45vh] object-contain object-bottom mx-auto
             
             /* DESKTOP: Absolute positioned as requested */
             md:absolute md:order-none md:h-auto md:mx-0
@@ -79,18 +82,19 @@ export default function Hero() {
             md:w-[260px] md:right-[26%] md:left-auto md:translate-x-0 md:top-[30%]
             lg:w-[420px]
           "
-          style={{
-            zIndex: 15,
-            filter: "drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.4))",
-          }}
-          alt="Carol H. Solís"
-        />
+            style={{
+              zIndex: 15,
+              filter: "drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.4))",
+            }}
+            alt="Carol H. Solís"
+          />
+        </div>
 
         {/* TÍTULO */}
         <h1
           className="
             /* MOBILE */
-            order-2 mt-4 text-[12vw] leading-none font-anton font-normal text-[#ffde59] uppercase text-center tracking-tight select-none
+            order-1 mt-4 text-[12vw] leading-none font-anton font-normal text-[#ffde59] uppercase text-center tracking-tight select-none
             /* DESKTOP */
             md:order-none md:mt-0 
             md:text-[160px] lg:text-[200px]
