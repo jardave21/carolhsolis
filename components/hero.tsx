@@ -50,25 +50,24 @@ export default function Hero() {
       className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center pt-5 pb-16 md:pt-0 md:pb-0"
     >
       {/* Fondo textura (Desktop only) */}
-      <div className="hidden md:block absolute inset-0 bg-[url('/images/bg-textura.png')] bg-cover bg-center opacity-30" />
 
       {/* Franja amarilla */}
       <div
         className="
           hidden md:block
           absolute left-0 w-full
-          top-[120px] md:top-[180px]
-          h-[55%] md:h-auto md:bottom-30
+          top-[120px] lg:top-[180px]
+          h-[55%] md:h-auto lg:bottom-30
           bg-[#ffde59]/20
           z-[1]
         "
       />
 
       {/* CONTENEDOR DEL TÍTULO + PERSONA */}
-      <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex flex-col md:block md:justify-center">
+      <div className="relative z-10 w-full max-w-7xl px-4 md:px-10 flex flex-col items-center lg:block lg:justify-center">
 
         {/* Persona (sin mover) */}
-        <div className="relative w-full order-2 md:static md:order-none">
+        <div className="relative w-full order-2 lg:static lg:order-none">
           <div className="absolute inset-0 bg-[#ffde59]/20 -z-10 md:hidden" />
           <img
             src="/images/marca_personal3.png"
@@ -76,11 +75,14 @@ export default function Hero() {
             /* MOBILE: Relative block, first in order */
             relative block w-full h-[45vh] object-contain object-bottom mx-auto
             
+            /* TABLET */
+            md:h-[60vh] md:w-auto
+
             /* DESKTOP: Absolute positioned as requested */
-            md:absolute md:order-none md:h-auto md:mx-0
-            md:left-[55%] md:-translate-x-1/2 md:top-[10px]
-            md:w-[260px] md:right-[26%] md:left-auto md:translate-x-0 md:top-[30%]
-            lg:w-[420px]
+            lg:absolute lg:order-none lg:h-auto lg:mx-0
+            lg:left-[55%] lg:-translate-x-1/2 lg:top-[10px]
+            lg:w-[260px] lg:right-[26%] lg:left-auto lg:translate-x-0 lg:top-[30%]
+            xl:w-[420px]
           "
             style={{
               zIndex: 15,
@@ -95,10 +97,15 @@ export default function Hero() {
           className="
             /* MOBILE */
             order-1 mt-4 text-[12vw] leading-none font-anton font-normal text-[#ffde59] uppercase text-center tracking-tight select-none
+            
+            /* TABLET */
+            md:text-[13vw]
+
             /* DESKTOP */
-            md:order-none md:mt-0 
-            md:text-[160px] lg:text-[200px]
-            md:text-center md:w-full
+            lg:order-none lg:mt-0 
+            lg:text-[160px] 
+            xl:text-[200px]
+            lg:text-center lg:w-full
           "
           style={{
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
@@ -112,32 +119,31 @@ export default function Hero() {
       <div
         className="
           w-full max-w-5xl px-4 md:px-6 
-          mt-8 md:mt-0 
+          mt-8 md:mt-12
           relative 
-          md:absolute md:top-[55%] md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 
-          z-10 order-3 md:order-none pointer-events-none
+          lg:absolute lg:top-[55%] lg:-translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 
+          z-10 order-3 lg:order-none pointer-events-none
         "
       >
         <div className="pointer-events-auto w-full md:w-auto">
-          <p
-            className="
-              font-semibold text-black uppercase text-center
-              text-xs tracking-[0.2em] mb-6
-              sm:text-lg sm:leading-snug sm:tracking-[0.25em]
-              md:text-xl md:tracking-[0.35em] md:text-left md:mb-6
-            "
-          >
-            <span className="block md:hidden">
-              PERIODISTA / ANALISTA POLITICA<br />
-              ACTIVISTA / ESCRITORA
-            </span>
-            <span className="hidden md:block">
-              PERIODISTA / <br />
-              ANALISTA POLITICA / <br />
-              ACTIVISTA / ESCRITORA
-            </span>
-          </p>
-
+                      <p
+                        className="
+                        font-semibold text-black uppercase text-center
+                        text-xs tracking-[0.2em] mb-6
+                        sm:text-lg sm:leading-snug sm:tracking-[0.25em]
+                        md:text-xl md:tracking-[0.35em] md:text-left md:mb-6
+                      "
+                      >
+                        <span className="block lg:hidden">
+                          PERIODISTA / ANALISTA POLITICA<br />
+                          ACTIVISTA / ESCRITORA
+                        </span>
+                        <span className="hidden lg:block">
+                          PERIODISTA / <br />
+                          ANALISTA POLITICA / <br />
+                          ACTIVISTA / ESCRITORA
+                        </span>
+                      </p>
           <form onSubmit={onSubmit} className="max-w-sm mx-auto md:mx-0">
             <label
               htmlFor="email"
