@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant tall (@media (min-height: 1100px));
 
 :root {
   /* Updated color theme with coral, gold, and light backgrounds per design brief */
@@ -20,7 +21,7 @@
   --muted-foreground: #6b7280;
   --accent: #F23827;
   --accent-foreground: #ffffff;
-  --destructive: #F23827
+  --destructive: #F23827;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #e5e7eb;
@@ -122,10 +123,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-anton;
     color: var(--title-color);
   }
@@ -137,6 +145,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -148,6 +157,7 @@
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

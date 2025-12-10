@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center pt-10 md:pt-0"
+      className="relative min-h-[90vh] bg-white overflow-hidden flex flex-col items-center pt-5 md:pt-0"
     >
       {/* Fondo textura (Desktop only) */}
 
@@ -82,7 +82,10 @@ export default function Hero() {
             lg:absolute lg:order-none lg:h-auto lg:mx-0
             lg:left-[55%] lg:-translate-x-1/2 lg:top-[10px]
             lg:w-[260px] lg:right-[26%] lg:left-auto lg:translate-x-0 lg:top-[30%]
-            xl:w-[420px]
+            
+            xl:w-[22vw] xl:max-w-[480px] 
+
+            
           "
             style={{
               zIndex: 15,
@@ -126,24 +129,24 @@ export default function Hero() {
         "
       >
         <div className="pointer-events-auto w-full md:w-auto">
-                      <p
-                        className="
+          <p
+            className="
                         font-semibold text-black uppercase text-center
                         text-xs tracking-[0.2em] mb-6
                         sm:text-lg sm:leading-snug sm:tracking-[0.25em]
                         md:text-xl md:tracking-[0.35em] md:text-left md:mb-6
                       "
-                      >
-                        <span className="block lg:hidden">
-                          PERIODISTA / ANALISTA POLITICA<br />
-                          ACTIVISTA / ESCRITORA
-                        </span>
-                        <span className="hidden lg:block">
-                          PERIODISTA / <br />
-                          ANALISTA POLITICA / <br />
-                          ACTIVISTA / ESCRITORA
-                        </span>
-                      </p>
+          >
+            <span className="block lg:hidden">
+              PERIODISTA / ANALISTA POLITICA<br />
+              ACTIVISTA / ESCRITORA
+            </span>
+            <span className="hidden lg:block">
+              PERIODISTA / <br />
+              ANALISTA POLITICA / <br />
+              ACTIVISTA / ESCRITORA
+            </span>
+          </p>
           <form onSubmit={onSubmit} className="max-w-sm mx-auto md:mx-0">
             <label
               htmlFor="email"
