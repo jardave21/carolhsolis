@@ -72,27 +72,25 @@ export default function Hero() {
           <img
             src="/images/marca_personal3.png"
             className="
-            /* MOBILE: Relative block, first in order */
-            relative block w-full h-[45vh] object-contain object-bottom mx-auto
-            
-            /* TABLET */
-            md:h-[60vh] md:w-auto
+              relative block w-full h-[45vh] object-contain object-bottom mx-auto
+              md:h-[60vh] md:w-auto
 
-            /* DESKTOP: Absolute positioned as requested */
-            lg:absolute lg:order-none lg:h-auto lg:mx-0
-            lg:left-[55%] lg:-translate-x-1/2 lg:top-[10px]
-            lg:w-[260px] lg:right-[26%] lg:left-auto lg:translate-x-0 lg:top-[30%]
-            
-            xl:w-[22vw] xl:max-w-[480px] 
+              /* DESKTOP FIJO Y ALINEADO */
+              lg:absolute lg:h-auto lg:mx-0
+              lg:left-[57%]           /* Antes 55% → ahora más a la izquierda */
+              lg:top-[30%]            /* Estable en pantallas 1080–1440p */
+              lg:-translate-x-1/2
+              lg:w-[260px]
 
-            
-          "
+              xl:w-[22vw] xl:max-w-[440px]
+            "
             style={{
               zIndex: 15,
               filter: "drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.4))",
             }}
             alt="Carol H. Solís"
           />
+
         </div>
 
         {/* TÍTULO */}
